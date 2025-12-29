@@ -1,0 +1,37 @@
+{
+    "alias": "staff",
+    "Version": "1.0",
+    "description": "",
+    "alwayson": true,
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Staff\\Providers\\Main"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "ownermenus": [
+        {
+            "name": "Staff",
+            "icon": "ki-people",
+            "route": "staff.index",
+            "isGroup": true,
+            "menus": [
+                {
+                    "name": "My Team",
+                    "route": "staff.index"
+                },
+                {
+                    "name": "Roles",
+                    "route": "staff.roles"
+                },
+                {
+                    "name": "Permissions",
+                    "route": "staff.permissions"
+                }
+            ]
+        }
+    ]
+}

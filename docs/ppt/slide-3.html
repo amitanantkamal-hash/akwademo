@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Meet Customers Where They Are</title>
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .accent-bar {
+      background-color: #25D366;
+      height: 6px;
+      width: 80px;
+    }
+
+    .stat-card {
+      background-color: #F9FAFB;
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s;
+      height: 100%;
+    }
+
+    .stat-number {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+      color: #25D366;
+      line-height: 1;
+    }
+
+    @media (min-width: 768px) {
+      .stat-number {
+        font-size: 3rem;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-white flex flex-col min-h-screen">
+  <!-- Top accent bar -->
+  <div class="w-full h-2 bg-green-500"></div>
+
+  <!-- Main content -->
+  <main class="flex flex-col px-6 md:px-20 py-10 flex-grow">
+    <!-- Title section -->
+    <div class="mb-8 text-center md:text-left">
+      <h1 class="text-2xl md:text-4xl font-bold mb-4 text-gray-800">
+        Meet Customers Where They Are
+      </h1>
+      <div class="accent-bar mx-auto md:mx-0 rounded"></div>
+    </div>
+
+    <!-- WhatsApp logo and intro -->
+    <div class="flex flex-col md:flex-row items-center mb-10 text-center md:text-left">
+      <img alt="WhatsApp Business Logo" class="w-20 h-20 mb-4 md:mb-0 md:mr-6" src="./img/whatsapp-business.png" />
+      <p class="text-lg md:text-xl max-w-3xl">
+        WhatsApp Business is where <span class="font-semibold">conversations happen</span>
+        and <span class="font-semibold">relationships build</span> —
+        a platform your customers already use and trust.
+      </p>
+    </div>
+
+    <!-- Statistics Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+      <div class="stat-card">
+        <div class="stat-number">2.9B+</div>
+        <div class="text-gray-600 mt-2">Monthly active users worldwide in 2025</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">98%</div>
+        <div class="text-gray-600 mt-2">Message open rates — 5× higher than email</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">45-60%</div>
+        <div class="text-gray-600 mt-2">Response rates for business messages</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">23×</div>
+        <div class="text-gray-600 mt-2">Average daily app opens per user</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">54%</div>
+        <div class="text-gray-600 mt-2">Consumers prefer WhatsApp for business communication</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">175M+</div>
+        <div class="text-gray-600 mt-2">People message businesses daily on WhatsApp</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer with navigation -->
+  <div class="w-full px-6 md:px-12 py-6 flex flex-col md:flex-row justify-between items-center bg-gray-50 gap-4">
+    <div class="footer-text">The Solution: WhatsApp for Business</div>
+    <div class="flex gap-4">
+      <a href="slide-2.html" class="px-4 py-2 bg-green-500 text-white rounded-lg shadow hover:bg-green-600">
+        <i class="fas fa-arrow-left mr-2"></i> Previous
+      </a>
+      <a href="slide-4.html" class="px-4 py-2 bg-green-500 text-white rounded-lg shadow hover:bg-green-600">
+        Next <i class="fas fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+    <div class="footer-text flex items-center">
+      <a href="https://sendinai.com" target="_blank"><i class="fas fa-globe mr-2"></i> sendinai.com</a>
+    </div>
+  </div>
+</body>
+
+</html>

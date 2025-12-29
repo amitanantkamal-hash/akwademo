@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Industry Applications</title>
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+  
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: #1F2937;
+    }
+
+    .subtitle {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      color: #4B5563;
+    }
+
+    .accent-bar {
+      background-color: #25D366;
+      height: 6px;
+      width: 80px;
+    }
+
+    .footer-text {
+      font-size: 14px;
+      color: #6B7280;
+    }
+
+    .industry-card {
+      border-radius: 8px;
+      background-color: #F9FAFB;
+      transition: transform 0.2s;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .industry-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+
+    .icon-ecommerce {
+      background-color: rgba(59, 130, 246, 0.1);
+      color: #3B82F6;
+    }
+
+    .icon-education {
+      background-color: rgba(245, 158, 11, 0.1);
+      color: #F59E0B;
+    }
+
+    .icon-realestate {
+      background-color: rgba(16, 185, 129, 0.1);
+      color: #10B981;
+    }
+
+    .icon-healthcare {
+      background-color: rgba(236, 72, 153, 0.1);
+      color: #EC4899;
+    }
+
+    .icon-hospitality {
+      background-color: rgba(139, 92, 246, 0.1);
+      color: #8B5CF6;
+    }
+
+    .use-case {
+      background-color: rgba(37, 211, 102, 0.1);
+      border-radius: 4px;
+      padding: 4px 8px;
+      margin: 2px;
+      font-size: 12px;
+      color: #25D366;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flex flex-col min-h-screen bg-white">
+    <!-- Top accent bar -->
+    <div class="w-full h-3 bg-green-500"></div>
+
+    <!-- Main content -->
+    <div class="flex-grow flex flex-col px-6 md:px-20 py-8">
+      <!-- Title -->
+      <div class="mb-8 text-center">
+        <h1 class="title text-3xl md:text-4xl mb-4">How Businesses Use Sendinai</h1>
+        <div class="accent-bar mx-auto"></div>
+      </div>
+
+      <!-- Grid of industries -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- E-commerce & Retail -->
+        <div class="industry-card p-6">
+          <div class="industry-icon icon-ecommerce mx-auto">
+            <i class="fas fa-shopping-bag"></i>
+          </div>
+          <h3 class="subtitle text-xl mb-3 text-center">E-commerce &amp; Retail</h3>
+          <p class="text-center mb-4">Convert browsers to buyers with personalized shopping experiences and real-time
+            support</p>
+          <div class="flex flex-wrap justify-center">
+            <span class="use-case">Product Catalogs</span>
+            <span class="use-case">Order Tracking</span>
+            <span class="use-case">Cart Recovery</span>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="industry-card p-6">
+          <div class="industry-icon icon-education mx-auto">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h3 class="subtitle text-xl mb-3 text-center">Education</h3>
+          <p class="text-center mb-4">Streamline enrollment, answer student inquiries, and deliver course materials
+            efficiently</p>
+          <div class="flex flex-wrap justify-center">
+            <span class="use-case">Admissions</span>
+            <span class="use-case">Class Reminders</span>
+            <span class="use-case">Quiz Delivery</span>
+          </div>
+        </div>
+
+        <!-- Real Estate -->
+        <div class="industry-card p-6">
+          <div class="industry-icon icon-realestate mx-auto">
+            <i class="fas fa-home"></i>
+          </div>
+          <h3 class="subtitle text-xl mb-3 text-center">Real Estate</h3>
+          <p class="text-center mb-4">Qualify leads, schedule viewings, and showcase properties with interactive media
+          </p>
+          <div class="flex flex-wrap justify-center">
+            <span class="use-case">Property Tours</span>
+            <span class="use-case">Lead Qualification</span>
+            <span class="use-case">Appointment Booking</span>
+          </div>
+        </div>
+
+        <!-- Healthcare -->
+        <div class="industry-card p-6">
+          <div class="industry-icon icon-healthcare mx-auto">
+            <i class="fas fa-heartbeat"></i>
+          </div>
+          <h3 class="subtitle text-xl mb-3 text-center">Healthcare</h3>
+          <p class="text-center mb-4">Simplify appointment scheduling, send medication reminders, and provide care
+            instructions</p>
+          <div class="flex flex-wrap justify-center">
+            <span class="use-case">Appointment Reminders</span>
+            <span class="use-case">Follow-up Care</span>
+            <span class="use-case">Patient Intake</span>
+          </div>
+        </div>
+
+        <!-- Restaurants & Hospitality -->
+        <div class="industry-card p-6">
+          <div class="industry-icon icon-hospitality mx-auto">
+            <i class="fas fa-utensils"></i>
+          </div>
+          <h3 class="subtitle text-xl mb-3 text-center">Restaurants &amp; Hospitality</h3>
+          <p class="text-center mb-4">Take orders, manage reservations, and enhance guest experiences with personalized
+            service</p>
+          <div class="flex flex-wrap justify-center">
+            <span class="use-case">Table Bookings</span>
+            <span class="use-case">Digital Menus</span>
+            <span class="use-case">Loyalty Programs</span>
+          </div>
+        </div>
+
+        <!-- Financial Services -->
+        <div class="industry-card p-6">
+          <div class="industry-icon bg-blue-50 text-blue-500 mx-auto">
+            <i class="fas fa-landmark"></i>
+          </div>
+          <h3 class="subtitle text-xl mb-3 text-center">Financial Services</h3>
+          <p class="text-center mb-4">Automate account updates, provide financial advice, and simplify customer
+            onboarding</p>
+          <div class="flex flex-wrap justify-center">
+            <span class="use-case">Transaction Alerts</span>
+            <span class="use-case">Application Status</span>
+            <span class="use-case">Payment Reminders</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer with nav buttons -->
+    <div class="w-full px-6 md:px-12 py-6 flex flex-col md:flex-row justify-between items-center bg-gray-50 gap-4">
+      <div class="footer-text">Industry Applications</div>
+      <div class="flex gap-4">
+        <a href="slide-7.html" class="px-4 py-2 bg-green-500 text-white rounded-lg shadow hover:bg-green-600">
+          <i class="fas fa-arrow-left mr-2"></i> Previous
+        </a>
+        <a href="slide-9a.html" class="px-4 py-2 bg-green-500 text-white rounded-lg shadow hover:bg-green-600">
+          Next <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+      <div class="footer-text flex items-center">
+        <a href="https://sendinai.com" target="_blank"><i class="fas fa-globe mr-2"></i> sendinai.com</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

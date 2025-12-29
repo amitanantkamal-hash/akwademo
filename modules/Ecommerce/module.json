@@ -1,0 +1,67 @@
+{
+    "alias": "ecommerce",
+    "version": "1.0",
+    "description": "",
+    "keywords": [],
+    "alwayson":true,
+    "active": 1,
+    "order": 0,
+    "nameSpace": "Modules\\Ecommerce",
+    "providers": [
+        "Modules\\Ecommerce\\Providers\\Main"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "vendor_fields":[
+        {
+            "separator":"Ecommerce",
+            "title": "Enable Ecommerce",
+            "key":"enable_ecommerce",
+            "ftype": "bool",
+            "icon":"🔊",
+            "value": true
+        }
+    ],
+    "ownermenus":[
+        {
+            "name":"Ecommerce",
+            "route":"tienda.index",
+            "icon":"ni ni-shop text-blue",
+            "isGroup":true,
+            "id":"tiendaMenu",
+            "menus":[
+                {
+                    "name":"Panel de control",
+                    "icon":"ni ni-tv-2 text-green",
+                    "route":"tienda.index"
+                },
+                {
+                    "name":"Pedidos",
+                    "icon":"ni ni-tag text-green",
+                    "route":"tienda.index"
+                },
+                {
+                    "name":"Categoría",
+                    "icon":"ni ni-bullet-list-67 text-primary",
+                    "route":"categorias.index"
+                },
+                {
+                    "name":"Productos",
+                    "icon":"ni ni-bag-17 text-primary",
+                    "route":"productos.index"
+                },
+                {
+                    "name":"Diseño",
+                    "icon":"ni ni-palette text-primary",
+                    "route":"tienda.index"
+                },
+                {
+                    "name":"Ajustes",
+                    "icon":"ni ni-settings-gear-65 text-primary",
+                    "route":"ajustes.index"
+                }
+            ]
+        }
+    ]
+}

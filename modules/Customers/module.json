@@ -1,0 +1,32 @@
+{
+    "alias": "customers",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "alwayson": true,
+    "order": 0,
+    "providers": [
+        "Modules\\Customers\\Providers\\Main"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "ownermenus": [
+        {
+            "name": "Customers",
+            "route": "customers.index",
+            "icon": "ki-profile-user",
+            "isGroup": true,
+            "menus": [
+                {
+                    "name": "Customers",
+                    "route": "customers.index"
+                },
+                {
+                    "name": "Subscriptions",
+                    "route": "customers.subscriptions"
+                }
+            ]
+        }
+    ]
+}

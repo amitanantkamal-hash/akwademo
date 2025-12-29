@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Information</title>
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    .title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: #1F2937;
+    }
+
+    .subtitle {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      color: #4B5563;
+    }
+
+    .accent-bar {
+      background-color: #25D366;
+      height: 6px;
+      width: 80px;
+    }
+
+    .footer-text {
+      font-size: 14px;
+      color: #6B7280;
+      text-align: center;
+    }
+
+    .contact-card {
+      background-color: #F9FAFB;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      border-left: 4px solid #25D366;
+    }
+
+    .contact-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(37, 211, 102, 0.1);
+      color: #25D366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .social-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: #F3F4F6;
+      color: #4B5563;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      transition: all 0.2s ease;
+    }
+
+    .social-icon:hover {
+      background-color: #25D366;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .qr-code-container {
+      width: 180px;
+      height: 180px;
+      background-color: white;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #E5E7EB;
+      position: relative;
+    }
+
+    .qr-code {
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cta-button {
+      background-color: #25D366;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-size: 18px;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .cta-button:hover {
+      background-color: #20BD5A;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body class="bg-white">
+  <div class="slide-container flex flex-col justify-between min-h-screen">
+    <!-- Top accent bar -->
+    <div class="w-full h-3 bg-green-500"></div>
+
+    <!-- Main content -->
+    <div class="flex flex-col lg:flex-row px-6 lg:px-20 py-8 lg:py-12 flex-grow gap-10">
+      <!-- Left column: Contact info -->
+      <div class="w-full lg:w-3/5">
+        <div class="mb-8 text-center lg:text-left">
+          <h1 class="title text-2xl sm:text-3xl lg:text-4xl mb-4">Get Started Today</h1>
+          <div class="accent-bar mx-auto lg:mx-0"></div>
+        </div>
+
+        <div class="contact-card p-6 sm:p-8 mb-8">
+          <h2 class="subtitle text-xl sm:text-2xl mb-6">Contact Information</h2>
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <div class="contact-icon mr-4"><i class="fas fa-globe"></i></div>
+              <div>
+                <h3 class="font-semibold">Website</h3>
+                <p><a href="https://sendinai.com" target="_blank">www.sendinai.com</a></p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="contact-icon mr-4"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h3 class="font-semibold">Email</h3>
+                <p><a href="mailto:contact@dotflo.org" target="_blank">contact@dotflo.org</a></p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="contact-icon mr-4"><i class="fa-brands fa-whatsapp"></i></div>
+              <div>
+                <h3 class="font-semibold">WhatsApp number</h3>
+                <p><a href="https://api.whatsapp.com/send/?phone=917217746313&text=Hi&type=phone_number" target="_blank">+91 72177 46313</a></p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="contact-icon mr-4"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <h3 class="font-semibold">Address</h3>
+                <p>Dotflo Technologies, Plot No 337, Business & Industrial Park, Phase-2, Industrial Area Phase II, Chandigarh, 160002</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="subtitle text-lg sm:text-xl mb-4">Connect With Us</h2>
+          <div class="flex space-x-4">
+            <a class="social-icon" href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a class="social-icon" href="#"><i class="fab fa-twitter"></i></a>
+            <a class="social-icon" href="#"><i class="fab fa-facebook-f"></i></a>
+            <a class="social-icon" href="#"><i class="fab fa-instagram"></i></a>
+            <a class="social-icon" href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right column: QR + CTA -->
+      <div class="w-full lg:w-2/5 flex flex-col items-center justify-center">
+        <div class="text-center">
+          <div class="qr-code-container mx-auto mb-6">
+            <div class="qr-code">
+              <i class="fas fa-qrcode text-6xl text-gray-400"></i>
+            </div>
+            <div
+              class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-white px-3 py-1 rounded-full border border-gray-200 text-sm font-medium">
+              Scan to visit
+            </div>
+          </div>
+
+          <h3 class="subtitle text-lg sm:text-xl mb-6">Ready to revolutionize your customer engagement?</h3>
+          <a class="cta-button mb-4" href="https://sendinai.com/register"><i class="fas fa-rocket mr-2"></i> Start Free
+            Trial</a>
+          <p class="mt-2 text-gray-500 text-sm sm:text-base">No credit card required • 7-day free trial</p>
+
+          <div class="mt-8 bg-blue-50 p-4 rounded-lg text-left w-full sm:w-auto">
+            <p class="text-blue-800 font-medium">Need personalized guidance?</p>
+            <p>Schedule a demo with our experts</p>
+            <a class="text-blue-600 font-semibold hover:underline mt-1 inline-block" href="https://calendly.com/dotflo/product-demo-request" target="_blank">Book a Demo →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer with navigation -->
+    <div class="w-full px-6 md:px-12 py-6 flex flex-col md:flex-row justify-between items-center bg-gray-50 gap-4">
+      <div class="footer-text">Contact Information</div>
+      <div class="flex gap-4">
+        <a href="slide-12.html" class="px-4 py-2 bg-green-500 text-white rounded-lg shadow hover:bg-green-600">
+          <i class="fas fa-arrow-left mr-2"></i> Previous
+        </a>
+        <a href="index.html" class="px-4 py-2 bg-green-500 text-white rounded-lg shadow hover:bg-green-600">
+          <i class="fas fa-home ml-2"></i> Start again
+        </a>
+
+        <a href="slide-14.html" class="px-4 py-2 bg-green-500 text-white rounded-lg shadow hover:bg-green-600">
+          Bussiness opportunities <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+      <div class="footer-text flex items-center">
+        <a href="https://sendinai.com" target="_blank"><i class="fas fa-globe mr-2"></i> sendinai.com</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Education Success Story</title>
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        .title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: #1F2937;
+        }
+
+        .subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            color: #374151;
+        }
+
+        .accent-bar {
+            background-color: #25D366;
+            height: 6px;
+            width: 80px;
+        }
+
+        .case-section {
+            background-color: #F9FAFB;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-left: 4px solid;
+        }
+
+        .challenge-section {
+            border-left-color: #EF4444;
+        }
+
+        .solution-section {
+            border-left-color: #3B82F6;
+        }
+
+        .result-section {
+            border-left-color: #10B981;
+        }
+
+        .comparison-container {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        @media (min-width: 768px) {
+            .comparison-container {
+                flex-direction: row;
+            }
+        }
+
+        .before-column {
+            background-color: #FEE2E2;
+            position: relative;
+        }
+
+        .after-column {
+            background-color: #DCFCE7;
+            position: relative;
+        }
+
+        .column-label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 8px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .before-label {
+            background-color: #EF4444;
+            color: white;
+        }
+
+        .after-label {
+            background-color: #10B981;
+            color: white;
+        }
+
+        .message-bubble {
+            border-radius: 8px;
+            padding: 12px;
+            margin: 8px 0;
+            max-width: 90%;
+        }
+
+        .customer-message {
+            background: #F3F4F6;
+            border-top-left-radius: 0;
+        }
+
+        .business-message {
+            background: #DCF8C6;
+            border-top-right-radius: 0;
+            margin-left: auto;
+        }
+
+        .result-highlight {
+            font-size: 48px;
+            font-weight: 700;
+            color: #10B981;
+            line-height: 1;
+        }
+
+        .icon-wrapper {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <main>
+        <div class="w-full h-3 bg-green-500"></div>
+        <div class="px-6 md:px-20 py-8">
+            <div class="mb-6">
+                <h1 class="title text-3xl md:text-4xl mb-3">Use Case: Student & Parent Notifications</h1>
+                <div class="accent-bar"></div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row mt-8 gap-8">
+                <!-- Left Column -->
+                <div class="flex-1">
+                    <div class="case-section challenge-section">
+                        <h2 class="subtitle text-xl mb-2 flex items-center">
+                            <div class="icon-wrapper bg-red-100 text-red-500"><i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            Challenge
+                        </h2>
+                        <p>Schools and colleges struggled to send timely notifications about attendance, results, fee
+                            reminders, and events. Traditional email/SMS channels had low open rates and caused staff
+                            overload.</p>
+                    </div>
+                    <div class="case-section solution-section">
+                        <h2 class="subtitle text-xl mb-2 flex items-center">
+                            <div class="icon-wrapper bg-blue-100 text-blue-500"><i class="fas fa-lightbulb"></i></div>
+                            Solution
+                        </h2>
+                        <p>Sendinai automated notifications via WhatsApp:</p>
+                        <ul class="list-disc ml-8 mt-2 space-y-1">
+                            <li>Instant attendance and result alerts</li>
+                            <li>Fee reminders and event updates sent automatically</li>
+                            <li>Two-way chat for parents to clarify queries</li>
+                            <li>Centralized Team Inbox for staff to manage all conversations</li>
+                        </ul>
+                    </div>
+                    <div class="case-section result-section">
+                        <h2 class="subtitle text-xl mb-2 flex items-center">
+                            <div class="icon-wrapper bg-green-100 text-green-500"><i class="fas fa-chart-line"></i>
+                            </div>
+                            Result
+                        </h2>
+                        <div class="flex items-center">
+                            <div class="result-highlight mr-4">90%</div>
+                            <div>
+                                <p class="font-semibold text-lg">Open rate on WhatsApp notifications</p>
+                                <p>Reduced staff workload by 60%</p>
+                                <p>Improved parent satisfaction and timely communication</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="flex-1">
+                    <div class="comparison-container">
+                        <div class="before-column w-full md:w-1/2 p-4 pt-14">
+                            <div class="column-label before-label">BEFORE</div>
+                            <div class="bg-white rounded-lg p-4 h-full shadow-sm">
+                                <div class="message-bubble customer-message text-sm">Hello, has my child received today's
+                                    attendance report?</div>
+                                <div class="message-bubble customer-message text-sm">When will exam results be shared?</div>
+                                <div class="text-red-500 text-sm font-semibold mt-4">Manual notification delay 1-2 days</div>
+                            </div>
+                        </div>
+                        <div class="after-column w-full md:w-1/2 p-4 pt-14">
+                            <div class="column-label after-label">AFTER</div>
+                            <div class="bg-white rounded-lg p-4 h-full shadow-sm">
+                                <div class="message-bubble business-message text-sm">Attendance for today has been
+                                    recorded. ✅</div>
+                                <div class="message-bubble business-message text-sm">Exam results for Math have been
+                                    published: [Link]</div>
+                                <div class="message-bubble business-message text-sm">Reminder: Parent-Teacher meeting
+                                    tomorrow at 4 PM</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center bg-gray-50 py-2 rounded-lg">
+                        <div class="text-sm font-medium">
+                            Implementation Time: <span class="font-bold text-blue-500">2 Days</span> | ROI: <span
+                                class="font-bold text-green-500">400% in first month</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full px-6 md:px-12 py-6 flex flex-col md:flex-row justify-between items-center bg-gray-50 gap-4">
+        <div class="footer-text">Education Success Story</div>
+        <div class="flex gap-4">
+            <a href="slide-9b.html" class="px-4 py-2 bg-green-500 text-white rounded-lg shadow hover:bg-green-600">
+                <i class="fas fa-arrow-left mr-2"></i> Previous
+            </a>
+            <a href="slide-9d.html" class="px-4 py-2 bg-green-500 text-white rounded-lg shadow hover:bg-green-600">
+                Next <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+        <div class="footer-text flex items-center">
+            <a href="https://sendinai.com" target="_blank"><i class="fas fa-globe mr-2"></i> sendinai.com</a>
+        </div>
+    </footer>
+</body>
+
+</html>

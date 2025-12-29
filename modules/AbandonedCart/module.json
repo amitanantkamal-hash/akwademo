@@ -1,0 +1,13 @@
+{
+    "alias": "abandoned-cart",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\AbandonedCart\\Providers\\Main"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

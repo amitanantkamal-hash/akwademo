@@ -1,0 +1,52 @@
+{
+    "alias": "whatsapp-flows",
+    "version":"1.1",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Whatsappflows\\Providers\\Main"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "vendor_fields":[{
+        "separator":"WhatsApp Flows",
+        "icon":"👥",
+        "title": "Enable WhatsApp Flows",
+        "key": "agent_enable",
+        "ftype": "bool",
+        "value":true
+    },
+    {
+        "title": "Show only assigned chats to WhatsApp Flows",
+        "key": "agent_assigned_only",
+        "ftype": "bool",
+        "value":false
+    }],
+    "ownermenus":[
+        {
+            "id":"whatsapp-flows",
+            "name":"Whatsapp Flows",
+            "icon":"ni ni-world-2 text-green",
+            "route":"whatsapp-flows.index",
+            "isGroup":true,
+            "menus":[ 
+                {
+                    "name":"Manage",
+                    "icon":"ni ni-world text-green",
+                    "route":"whatsapp-flows.index"
+                },
+                {
+                    "name":"Create",
+                    "icon":"ni ni-badge text-info",
+                    "route":"whatsapp-flows.create"
+                }
+
+            ]
+        }
+        
+    ]
+
+}

@@ -1,0 +1,26 @@
+<?php
+
+return [
+    'Habilitar' => 'Habilitar',
+    'media_type' => 'Media type',
+    'title_admin' => 'Gestión de publicidad interna',
+    'add_ads' => 'Crear Publicidad',
+    'edit_ads' => 'Editar Publicidad',
+    'active' => 'active',
+    'inactive' => 'inactive',
+    'url_to_redirect' => 'Url de redirección de la publicidad',
+    'start_date' => 'Fecha de inicio',
+    'end_date' => 'Fecha de finalizacion',
+    'image' => 'Image',
+    'video' => 'Video',
+    'url_to_media' => 'Url a medio externo',
+    'select_type_media' => 'Seleccione un tipo de medio',
+    'url_image' => 'Imagen de la publicidad',
+    'url_video' => 'Url del vídeo de la publicidad',
+    'habilitado' => 'Enable',
+    'actions' => 'Actions',
+    'ads' => 'ADS',
+    'not_ads_found' => 'No advertising records',
+    'upload_file' => 'Subir Archivo',
+    'url_media' => 'Url al medio',
+];

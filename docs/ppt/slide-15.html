@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>White-Label Pricing & Features</title>
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+
+  <!-- Tailwind CSS & FontAwesome -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background-color: #fff;
+    }
+
+    .title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: #1F2937;
+    }
+
+    .subtitle {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      color: #4B5563;
+    }
+
+    .accent-bar {
+      background-color: #25D366;
+      height: 6px;
+      width: 80px;
+      border-radius: 3px;
+      margin-bottom: 20px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .feature-icon {
+      color: #25D366;
+      font-size: 20px;
+      margin-right: 12px;
+      min-width: 24px;
+      text-align: center;
+    }
+
+    .pricing-card {
+      background-color: #F9FAFB;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #E5E7EB;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      min-width: 280px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .roi-card {
+      background-color: #F0FDF4;
+      border-left: 6px solid #10B981;
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+
+    .tnc-card {
+      background-color: #F9FAFB;
+      border-left: 6px solid #3B82F6;
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-top: 2rem;
+    }
+
+    .feature-check {
+      color: #25D366;
+      margin-right: 8px;
+    }
+
+    .footer-text {
+      font-size: 14px;
+      color: #6B7280;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body class="bg-white">
+  <div class="slide-container flex flex-col justify-between min-h-screen">
+    <!-- Top accent bar -->
+    <div class="w-full h-3 bg-green-500"></div>
+
+    <!-- Main content -->
+    <div class="flex flex-col lg:flex-row px-6 lg:px-20 py-8 lg:py-12 flex-grow gap-10">
+      <!-- Left column: Description, Features, T&C -->
+      <div class="w-full lg:w-1/2">
+        <div class="mb-8 text-center lg:text-left">
+          <h1 class="title text-3xl lg:text-4xl mb-2">White-Label <span class="text-green-500">Pricing & Features</span>
+          </h1>
+          <div class="accent-bar mx-auto lg:mx-0"></div>
+          <p class="subtitle mt-4 text-lg lg:text-xl">Setup & Pricing Details for Your Own Messaging Business</p>
+        </div>
+
+        <!-- Features -->
+        <div class="mt-6">
+          <h2 class="subtitle text-xl mb-4">What You Get</h2>
+          <div class="space-y-2">
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fas fa-robot"></i></div>Unlimited Everything
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fas fa-chart-line"></i></div>Real-Time Analytics
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fas fa-bullhorn"></i></div>Bulk Messaging & API Access
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fas fa-headset"></i></div>Priority Support
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fas fa-certificate"></i></div>Custom Branding & Domain
+            </div>
+          </div>
+
+
+          <!-- T&C Card -->
+          <div class="tnc-card">
+            <h3 class="title text-xl mb-2">Terms & Conditions</h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-2">
+              <li>Source code will never be shared.</li>
+              <li>Backend support assisted; training & customer support must be provided by you.</li>
+              <li>Customer data managed securely with signed privacy agreements.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right column: Pricing cards -->
+      <div class="w-full lg:w-1/2 flex flex-col gap-4">
+        <!-- One-Time Setup Fee Card -->
+        <div class="pricing-card flex flex-col">
+          <div class="bg-white p-6 text-center">
+            <h3 class="subtitle text-lg mb-1">One-Time Setup Fee</h3>
+                <div class="price text-2xl mb-1 text-gray-700">(Contact us for pricing)</div>
+            <p class="text-gray-500 text-sm">Infrastructure & server costs borne by partner</p>
+          </div>
+        </div>
+
+        <!-- Monthly per Customer Card -->
+        <div class="pricing-card flex flex-col">
+          <div class="bg-white p-6 text-center">
+            <h3 class="subtitle text-lg mb-1">Monthly per Customer</h3>
+            <div class="price text-2xl mb-1">₹499<span class="price-suffix">/month</span></div>
+            <p class="text-gray-500 text-sm">No hidden charges. Everything included under your brand.</p>
+          </div>
+        </div>
+
+        <!-- ROI Card (Indicative) -->
+        <div class="pricing-card flex flex-col roi-card">
+          <h3 class="title text-xl mb-2">Potential ROI 📈</h3>
+
+          <div class="text-gray-700 mb-2">
+            <p>With 10 customers billed at <span class="font-semibold">₹2,499/month</span>, your total annual revenue:
+            </p>
+            <p class="text-2xl font-bold text-green-600">₹2,99,880 / year</p>
+          </div>
+
+          <div class="text-gray-700 mb-2">
+            <p>Estimated annual cost for these 10 customers at ₹499/month:</p>
+            <p class="text-xl font-semibold text-blue-600">₹59,880 / year</p>
+          </div>
+
+          <div class="text-gray-700 mb-2">
+            <p>Estimated server cost (approx.):</p>
+            <p class="text-xl font-semibold text-blue-600">₹34,788 / year</p>
+          </div>
+
+          <div class="text-gray-800 font-bold text-lg mt-2">
+            Net potential profit (indicative): <span class="text-green-700">₹2,05,212 / year</span>
+          </div>
+
+          <p class="text-gray-500 text-sm mt-2 italic">*Figures are indicative and may vary depending on actual usage
+            and costs.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer with navigation -->
+    <!-- Footer -->
+    <footer class="mt-auto p-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="footer-text">White Label Messaging Platform</div>
+      <div class="flex gap-4">
+        <a href="slide-14.html"
+          class="px-4 py-2 bg-green-500 text-white rounded-lg shadow hover:bg-green-600 flex items-center">
+          <i class="fas fa-arrow-left mr-2"></i> Previous
+        </a>
+
+        <a href="index.html" class="px-4 py-2 bg-green-500 text-white rounded-lg shadow hover:bg-green-600">
+          <i class="fas fa-home ml-2"></i> Start again
+        </a>
+      </div>
+      <div class="footer-text flex items-center">
+        <a href="https://sendinai.com" target="_blank"><i class="fas fa-globe mr-2"></i> sendinai.com</a>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+{
+    "alias": "c-t-w-a-meta",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\CTWAMeta\\Providers\\Main"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

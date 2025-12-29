@@ -1,0 +1,40 @@
+{
+    "alias": "invoices",
+    "version": "1.0",
+    "alwayson": true,
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 1,
+    "providers": [
+        "Modules\\Invoices\\Providers\\Main"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "ownermenus": [
+        {
+            "name": "Invoices",
+            "icon": "ki-cheque",
+            "route": "invoices.index",
+            "isGroup": true,
+            "menus": [
+                {
+                    "name": "Invoices",
+                    "icon": "ni ni-send text-green",
+                    "route": "invoices.index"
+                },
+                {
+                    "name": "Create Invoice",
+                    "icon": "ni ni-send text-green",
+                    "route": "invoices.create"
+                },
+                {
+                    "name": "Taxes",
+                    "icon": "ni ni-send text-green",
+                    "route": "invoices.taxes"
+                }
+            ]
+        }
+    ]
+}

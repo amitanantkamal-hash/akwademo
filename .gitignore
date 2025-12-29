@@ -1,0 +1,49 @@
+.env
+.well-known
+cgi-bin
+node_modules/
+npm-debug.log
+/vendor/
+
+# Laravel 4 specific
+bootstrap/compiled.php
+app/storage/
+
+# Laravel 5 & Lumen specific
+public/storage
+public/hot
+storage/*.key
+.env.*.php
+.env.php
+.env
+.env-prod
+.env.dev
+Homestead.yaml
+Homestead.json
+storage/*
+
+# Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
+.rocketeer/
+
+#credentials file
+creds.txt
+#marked as old files
+/*.old
+#zip files
+/*.zip
+#Personal TODO list
+/TODO.md
+
+#whatsApp flow json
+/public/flows/json/
+/public/custom/imgs/
+/public/.DS_Store
+.DS_Store
+
+storage/framework/cache/*
+public/uploads/media/*
+public/backend/Assets/*
+storage/app/*
+
+/modules/Not_Required/*
+public/uploads/*

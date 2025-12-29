@@ -1,0 +1,68 @@
+{
+  "_popper-bd0f1ac6.js": {
+    "file": "assets/popper-bd0f1ac6.js"
+  },
+  "modules/BotFlow/Resources/assets/css/app.css": {
+    "file": "assets/app-0beb5e1d.css",
+    "isEntry": true,
+    "src": "modules/BotFlow/Resources/assets/css/app.css"
+  },
+  "modules/BotFlow/Resources/assets/css/tenant-app.css": {
+    "file": "assets/tenant-app-df20748e.css",
+    "isEntry": true,
+    "src": "modules/BotFlow/Resources/assets/css/tenant-app.css"
+  },
+  "modules/BotFlow/Resources/assets/js/app.css": {
+    "file": "assets/app-bc1e5f8a.css",
+    "src": "modules/BotFlow/Resources/assets/js/app.css"
+  },
+  "modules/BotFlow/Resources/assets/js/app.js": {
+    "css": [
+      "assets/app-bc1e5f8a.css"
+    ],
+    "dynamicImports": [
+      "node_modules/intl-tel-input/build/js/utils.js",
+      "node_modules/intl-tel-input/build/js/utils.js"
+    ],
+    "file": "assets/app-d1130f6c.js",
+    "imports": [
+      "_popper-bd0f1ac6.js"
+    ],
+    "isEntry": true,
+    "src": "modules/BotFlow/Resources/assets/js/app.js"
+  },
+  "node_modules/intl-tel-input/build/img/flags.webp": {
+    "file": "assets/flags-0e2a53ec.webp",
+    "src": "node_modules/intl-tel-input/build/img/flags.webp"
+  },
+  "node_modules/intl-tel-input/build/img/flags@2x.webp": {
+    "file": "assets/flags@2x-cd67a727.webp",
+    "src": "node_modules/intl-tel-input/build/img/flags@2x.webp"
+  },
+  "node_modules/intl-tel-input/build/img/globe.webp": {
+    "file": "assets/globe-837a1f6f.webp",
+    "src": "node_modules/intl-tel-input/build/img/globe.webp"
+  },
+  "node_modules/intl-tel-input/build/img/globe@2x.webp": {
+    "file": "assets/globe@2x-23f37b62.webp",
+    "src": "node_modules/intl-tel-input/build/img/globe@2x.webp"
+  },
+  "node_modules/intl-tel-input/build/js/utils.js": {
+    "file": "assets/utils-da60e85d.js",
+    "isDynamicEntry": true,
+    "src": "node_modules/intl-tel-input/build/js/utils.js"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-4ed993c7.js",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-6c8b39c4.js",
+    "imports": [
+      "_popper-bd0f1ac6.js"
+    ],
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  }
+}

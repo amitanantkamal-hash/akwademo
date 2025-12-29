@@ -1,0 +1,35 @@
+[program:whatsapp-high]
+process_name=%(program_name)s_%(process_num)02d
+command=/usr/bin/php /home/sendinai/public_html/artisan queue:work --queue=high_priority --sleep=3 --tries=3 --timeout=120
+numprocs=8
+autostart=true
+autorestart=true
+user=root
+stderr_logfile=/home/sendinai/public_html/whatsapp-high.err.log
+stdout_logfile=/home/sendinai/public_html/whatsapp-high.out.log
+
+[program:whatsapp-medium]
+process_name=%(program_name)s_%(process_num)02d
+command=/usr/bin/php /home/sendinai/public_html/artisan queue:work --queue=medium_priority --sleep=5 --tries=3 --timeout=120
+numprocs=4
+autostart=true
+autorestart=true
+user=root
+stderr_logfile=/home/sendinai/public_html/whatsapp-medium.err.log
+stdout_logfile=/home/sendinai/public_html/whatsapp-medium.out.log
+
+[program:whatsapp-low]
+process_name=%(program_name)s_%(process_num)02d
+command=/usr/bin/php /home/sendinai/public_html/artisan queue:work --queue=low_priority --sleep=10 --tries=3 --timeout=120
+numprocs=2
+autostart=true
+autorestart=true
+user=root
+stderr_logfile=/home/sendinai/public_html/whatsapp-low.err.log
+stdout_logfile=/home/sendinai/public_html/whatsapp-low.out.log
+
+
+
+
+sudo supervisorctl reread
+sudo supervisorctl update

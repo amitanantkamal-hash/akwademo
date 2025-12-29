@@ -1,0 +1,40 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Client\TeamController;
+use App\Http\Controllers\Client\UserController;
+use App\Http\Controllers\Client\TicketController;
+use App\Http\Controllers\Client\ContactController;
+use App\Http\Controllers\Client\MessageController;
+use App\Http\Controllers\Client\SegmentController;
+use App\Http\Controllers\Client\AiWriterController;
+use App\Http\Controllers\Client\BotReplyController;
+use App\Http\Controllers\Client\TemplateController;
+use App\Http\Controllers\Client\ContactTagController;
+use App\Http\Controllers\Client\ContactNoteController;
+use App\Http\Controllers\Client\FlowBuilderController;
+use App\Http\Controllers\Client\ContactsListController;
+use App\Http\Controllers\SubscriptionController;
+use App\Http\Controllers\Client\ClientSettingController;
+use App\Http\Controllers\Client\ClientDashboardController;
+use App\Http\Controllers\Client\ContactAttributeController;
+use App\Http\Controllers\Client\TelegramCampaignController;
+use App\Http\Controllers\Client\WhatsappCampaignController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\Client\TelegramSubscriberController;
+
+Route::get('available-plans', [SubscriptionController::class, 'availablePlans'])->name('available.plans');
+Route::get('pending-subscription', [SubscriptionController::class, 'pendingSubscription'])->name('pending.subscription');
+Route::get('upgrade-plan/{id}', [SubscriptionController::class, 'upgradePlan'])->name('upgrade.plan');
+Route::post('offline-claim', [SubscriptionController::class, 'offlineClaim'])->name('offline.claim');
+Route::post('upgrade-plan/free', [SubscriptionController::class, 'upgradeFreePlan'])->name('upgrade-plan.free');
+Route::post('stripe-redirect', [SubscriptionController::class, 'stripeRedirect'])->name('stripe.redirect');
+Route::get('stripe-success', [SubscriptionController::class, 'stripeSuccess'])->name('stripe.payment.success');
+Route::post('paypal-redirect', [SubscriptionController::class, 'paypalRedirect'])->name('paypal.redirect');
+Route::get('paypal-success', [SubscriptionController::class, 'paypalSuccess'])->name('paypal.payment.success');
+Route::post('paddle-redirect', [SubscriptionController::class, 'paddleRedirect'])->name('paddle.redirect');
+Route::match(['get','post'],'paddle-success', [SubscriptionController::class, 'paddleSuccess'])->name('paddle.payment.success');
+Route::post('razor_pay-redirect', [SubscriptionController::class, 'razorPayRedirect'])->name('razor.pay.redirect');
+Route::match(['post', 'get'], 'client/razor_pay-success', [SubscriptionController::class, 'razorPaySuccess'])->name('razor.pay.payment.success');
+Route::post('mercadopago-redirect', [SubscriptionController::class, 'mercadopagoRedirect'])->name('mercadopago.redirect');
+Route::match(['post', 'get'], 'mercadopago-success', [SubscriptionController::class, 'mercadopagoSuccess']);

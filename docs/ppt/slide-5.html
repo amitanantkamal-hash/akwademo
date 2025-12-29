@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Core Features Overview</title>
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+    
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            /* Prevents horizontal scroll only */
+            overflow-y: auto;
+            /* Allows vertical scroll */
+        }
+
+
+        .slide-container {
+            width: 100%;
+            min-height: 100vh;
+            position: relative;
+            background-color: #ffffff;
+        }
+
+        .title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: #1F2937;
+        }
+
+        .subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            color: #4B5563;
+        }
+
+        .accent-bar {
+            background-color: #25D366;
+            height: 6px;
+            width: 80px;
+        }
+
+        .footer-text {
+            font-size: 14px;
+            color: #6B7280;
+        }
+
+        .feature-card {
+            border-radius: 8px;
+            background-color: #F9FAFB;
+            height: 100%;
+            transition: transform 0.2s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .icon-api {
+            background-color: rgba(37, 211, 102, 0.1);
+            color: #25D366;
+        }
+
+        .icon-chatbot {
+            background-color: rgba(59, 130, 246, 0.1);
+            color: #3B82F6;
+        }
+
+        .icon-catalog {
+            background-color: rgba(245, 158, 11, 0.1);
+            color: #F59E0B;
+        }
+
+        .icon-messaging {
+            background-color: rgba(139, 92, 246, 0.1);
+            color: #8B5CF6;
+        }
+
+        .icon-workflow {
+            background-color: rgba(236, 72, 153, 0.1);
+            color: #EC4899;
+        }
+
+        .icon-lead {
+            background-color: rgba(14, 165, 233, 0.1);
+            color: #0EA5E9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-container flex flex-col justify-between">
+        <!-- Top accent bar -->
+        <div class="w-full h-3 bg-green-500"></div>
+
+        <!-- Main content -->
+        <div class="flex flex-col px-6 lg:px-20 py-12 flex-grow">
+            <!-- Title section -->
+            <div class="mb-8 text-center">
+                <h1 class="title text-3xl lg:text-4xl mb-4">One Platform, Endless Possibilities</h1>
+                <div class="accent-bar mx-auto"></div>
+            </div>
+
+            <!-- Features grid (responsive) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+                <!-- Feature 1 -->
+                <div class="feature-card p-6">
+                    <div class="feature-icon icon-api mx-auto"><i class="fas fa-plug"></i></div>
+                    <h3 class="subtitle text-xl mb-2 text-center">Official API Integration</h3>
+                    <p class="text-center">Direct access to WhatsApp Business API with official Meta partnership</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card p-6">
+                    <div class="feature-icon icon-chatbot mx-auto"><i class="fas fa-robot"></i></div>
+                    <h3 class="subtitle text-xl mb-2 text-center">No-Code Chatbot Builder</h3>
+                    <p class="text-center">Create intelligent conversation flows with simple drag-and-drop interface</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card p-6">
+                    <div class="feature-icon icon-catalog mx-auto"><i class="fas fa-shopping-cart"></i></div>
+                    <h3 class="subtitle text-xl mb-2 text-center">In-Chat Catalogs &amp; Carts</h3>
+                    <p class="text-center">Showcase products and enable purchases directly within conversations</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card p-6">
+                    <div class="feature-icon icon-messaging mx-auto"><i class="fas fa-paper-plane"></i></div>
+                    <h3 class="subtitle text-xl mb-2 text-center">Bulk &amp; Template Messaging</h3>
+                    <p class="text-center">Send personalized marketing campaigns and notifications at scale</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="feature-card p-6">
+                    <div class="feature-icon icon-workflow mx-auto"><i class="fas fa-cogs"></i></div>
+                    <h3 class="subtitle text-xl mb-2 text-center">Smart Workflow Automation</h3>
+                    <p class="text-center">Set up triggers and actions to automate repetitive customer journeys</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="feature-card p-6">
+                    <div class="feature-icon icon-lead mx-auto"><i class="fas fa-user-check"></i></div>
+                    <h3 class="subtitle text-xl mb-2 text-center">Real-Time Lead Management</h3>
+                    <p class="text-center">Track, qualify and nurture leads throughout the sales pipeline</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer with navigation -->
+        <div class="w-full px-6 md:px-12 py-6 flex flex-col md:flex-row justify-between items-center bg-gray-50 gap-4">
+            <div class="footer-text">Core Features Overview</div>
+            <div class="flex gap-4">
+                <a href="slide-4.html" class="px-4 py-2 bg-green-500 text-white rounded-lg shadow hover:bg-green-600">
+                    <i class="fas fa-arrow-left mr-2"></i> Previous
+                </a>
+                <a href="slide-6.html" class="px-4 py-2 bg-green-500 text-white rounded-lg shadow hover:bg-green-600">
+                    Next <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            <div class="footer-text flex items-center">
+                <a href="https://sendinai.com" target="_blank"><i class="fas fa-globe mr-2"></i> sendinai.com</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

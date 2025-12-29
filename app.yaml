@@ -1,0 +1,149 @@
+runtime: php82
+
+env_variables:
+  APP_NAME: "Anantkamal Wademo"
+  APP_ENV: prodcution
+  APP_KEY: base64:WDFcRRDEwEcJ0ogSCdn6+EVJRUX93kUEgG8qRgZEYhw=
+  APP_DEBUG: true
+  APP_LOCALE: en
+  APP_CODE_NAME: "wpbox"
+  APP_URL: https://anantkamalwademo.online/
+
+  TASK_1: "Setup SMTP - used for sending emails"
+  TASK_1_DOCS: "https://mobidonia.notion.site/Mail-server-Required-59f5add2a79e41b38a11a85a6735901c?pvs=4"
+  TASK_2: "Setup Pusher - used for live chat"
+  TASK_2_DOCS: "https://www.notion.so/mobidonia/Pusher-Setup-Required-6de563c4d7344343b57ebd015181415e"
+  TASK_3: "CRON Jobs - used for automated campaigns send"
+  TASK_3_DOCS: "https://mobidonia.notion.site/Cron-job-setup-Required-c1214d6cb61e431a85d1093b6f8ccec9?pvs=4"
+  TASK_3_INFO: "Your cron job url is: {url}/webhook/wpbox/sendschuduledmessages"
+
+  ENABLE_PRICING: true
+  SHOW_COMPANY_PAGE: false
+  SHOW_COMPANY_LOGO: false
+  FRONT_LANGUAGES: EN,English
+  LIMIT_ITEMS_NAME: "Campaigns limit"
+  LIMIT_VIEWS_NAME: "Messages limit"
+  LIMIT_ORDERS_NAME: "Contacts limit"
+  LIMIT_ITEMS_SHOW: true
+  LIMIT_VIEWS_SHOW: true
+  LIMIT_ORDERS_SHOW: true
+  HIDE_COMPANY_PROFILE: true
+  HIDE_SHARE_LINK: true
+
+  LANDING_PAGE: "Modules\\Wpbox\\Http\\Controllers\\DashboardController"
+  LOGO_URL: /uploads/settings/177b1626-23c1-4fbc-96d0-a44b2d48b05e_logo.jpg
+  ADMIN_EMAIL: 
+  ADMIN_PASSWORD:
+
+  LANDING_PAGE_FUNCTIONS: "feature,testimonial,faq,mainfeature"
+  LANDING_PAGE_TITLES: "Features,Testimonials,FAQs,Main Features"
+
+  SHOW_DEMO_CREDENTIALS: false
+  IS_DEMO: false
+
+  LOG_CHANNEL: stack
+  LOG_DEPRECATIONS_CHANNEL: null
+  LOG_LEVEL: debug
+
+  DB_CONNECTION: mysql
+  DB_HOST: 127.0.0.1
+  DB_PORT: 3306
+  DB_DATABASE: 
+  DB_USERNAME: 
+  DB_PASSWORD: ""
+
+  BROADCAST_DRIVER: pusher
+  CACHE_DRIVER: file
+  FILESYSTEM_DISK: local
+  QUEUE_CONNECTION: sync
+  SESSION_DRIVER: file
+  SESSION_LIFETIME: 120
+
+  MEMCACHED_HOST: 127.0.0.1
+
+  REDIS_HOST: 127.0.0.1
+  REDIS_PASSWORD: 
+  REDIS_PORT: 6379
+
+  MAIL_MAILER: smtp
+  MAIL_HOST: smtp.sendgrid.net
+  MAIL_PORT: 587
+  MAIL_USERNAME: apikey
+  MAIL_PASSWORD: 
+  MAIL_ENCRYPTION: tls
+  MAIL_FROM_ADDRESS: team@dotflo.io
+  MAIL_FROM_NAME: "Anantkamal Software Labs"
+
+  AWS_ACCESS_KEY_ID: 
+  AWS_SECRET_ACCESS_KEY: 
+  AWS_DEFAULT_REGION: us-east-1
+  AWS_BUCKET: 
+  AWS_USE_PATH_STYLE_ENDPOINT: false
+
+  PUSHER_APP_ID: 1715460
+  PUSHER_APP_KEY: 3bc07cfeb4a38ac5f47e
+  PUSHER_APP_SECRET: 3f7c5d0bcc2bf1e97099
+  PUSHER_APP_CLUSTER: us2
+
+
+  VITE_PUSHER_APP_KEY: 3bc07cfeb4a38ac5f47e"${PUSHER_APP_KEY}"
+  VITE_PUSHER_APP_CLUSTER: "${PUSHER_APP_CLUSTER}"
+  DB_PREFIX: ""
+
+  IGNORE_SUBDOMAINS: www,app
+  DISABLE_LANDING: true
+  WILDCARD_DOMAIN_READY: false
+  STORAGE_TYPE: public_uploads
+  GOOGLE_CLIENT_ID:
+  GOOGLE_CLIENT_SECRET: 
+  GOOGLE_REDIRECT: https://app.dotflo.io
+  FACEBOOK_CLIENT_ID:
+  FACEBOOK_CLIENT_SECRET:
+  FACEBOOK_REDIRECT: https://app.dotflo.io
+  VENDOR_ENTITY_NAME: Company
+  VENDOR_ENTITY_NAME_PLURAL: Companies
+  EXTENDED_LICENSE_DOWNLOAD_CODE:
+  APP_LOG_LEVEL: debug
+  SUBSCRIPTION_PROCESSOR: Stripe
+  FREE_PRICING_ID: 1
+  FORCE_USERS_TO_PAY: false
+  STRIPE_KEY: 
+  STRIPE_SECRET: 
+  LOCAL_TRANSFER_INFO: "Wire us the plan amout on the following bank accoun. And inform us about the wire."
+  LOCAL_TRANSFER_ACCOUNT: "IBAN: 12112121212121"
+  TIME_ZONE: Europe/Berlin
+  CASHIER_CURRENCY: USD
+  DO_CONVERTION: true
+  TIME_FORMAT: AM/PM
+  DATETIME_DISPLAY_FORMAT: "d M Y h:i A"
+  DATETIME_WORKING_HOURS_DISPLAY_FORMAT_NEW: "E HH:mm"
+  DEFAULT_COUNTRY: US
+  GOOGLE_MAPS_API_KEY: 
+  GOOGLE_MAPS_ENABLED_ON_DETAILS: true
+  RECAPTCHA_SECRET_KEY: 
+  SHARE_THIS_PROPERTY: 
+  QUEUE_DRIVER: sync
+  paddleVendorID: 
+  PAYPAL_SUBSCRIBE_CLIENT_ID: 
+  PAYPAL_SUBSCRIBE_SECRET: 
+  PAYPAL_SUBSCRIBE_MODE: sandbox
+  PayStack_SUBSCRIBE_PUBLIC_KEY: 
+  PayStack_SUBSCRIBE_SECRET: 
+  PayStack_SUBSCRIBE_MODE: sandbox
+  RAZORPAY_SUBSCRIBE_KEY: 
+  RAZORPAY_SUBSCRIBE_SECRET: 
+  RAZORPAY_SUBSCRIBE_WEBHOOK_SECRET: 
+
+# This directive tells App Engine to serve public/index.php as a script.
+entrypoint: serve public/index.php --port 8080
+
+# URL handlers
+handlers:
+- url: /.*
+  script: auto
+  secure: always
+  redirect_http_response_code: 301
+
+- url: /(.+\.(gif|png|jpg))$
+  static_files: \1
+  upload: .+\.(gif|png|jpg)$
