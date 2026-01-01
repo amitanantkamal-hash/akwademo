@@ -1,5 +1,3 @@
-{{-- Brij Mohan Negi Update --}}
-
 @extends('layouts.app-client')
 
 @section('content')

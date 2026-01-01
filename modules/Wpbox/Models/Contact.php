@@ -255,10 +255,10 @@ class Contact extends ModelsContact
         $buttons = '';
         $contact_now = Contact::find($this->id);
 
-        //Brij MOhan Negi Update for chatbot reply with interactive list and button with image on header
+        //Update for chatbot reply with interactive list and button with image on header
         $buttonComponent = [];
-        $buttonTemplate = json_decode($reply->interactive_template_group); //Brij Mohan Negi Update
-        $out_message_type = 1; //Brij Mohan Negi Update
+        $buttonTemplate = json_decode($reply->interactive_template_group);
+        $out_message_type = 1;
         $list_button_text = null;
         $buttonData = '';
         $listData = '';
@@ -337,7 +337,6 @@ class Contact extends ModelsContact
                 }
             }
 
-            //Brij Mohan Negi Update
             if ($template_action_type == 2) {
                 $buttonData = json_encode($buttonComponent);
                 $listData = '';
@@ -676,10 +675,10 @@ class Contact extends ModelsContact
             'header_document' => $header_document,
             'header_location' => $header_location,
             'footer_text' => $reply->footer,
-            'buttons' => $buttonData, //Brij Mohan Negi Update
-            'message_type' => $reply->header_type, //Brij Mohan Negi Update
-            'out_message_type' => $out_message_type, //Brij Mohan Negi Update
-            'list_section_data' => $listData, //Brij Mohan Negi Update
+            'buttons' => $buttonData,
+            'message_type' => $reply->header_type,
+            'out_message_type' => $out_message_type,
+            'list_section_data' => $listData,
             'is_message_by_contact' => false,
             'is_campign_messages' => false,
             'status' => 1,

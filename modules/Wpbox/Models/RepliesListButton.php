@@ -8,8 +8,7 @@ use App\Scopes\CompanyScope;
 
 class RepliesListButton extends Model
 {
-     // Brij Mohan Negi Update
-     protected $table = 'replies_list_button_template';
+    protected $table = 'replies_list_button_template';
      public $guarded = [];
  
      protected static function booted(){

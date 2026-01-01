@@ -1,4 +1,3 @@
-{{-- Brij MOhan Negi Update --}}
 @if ($image_data['page'] == 0 && $image_data['folder'] != 0)
     <div class="col-2">
         <a href="javascript:void(0);" class="fm-list-item fm-folder-item rounded mb-4 bg-white" data-folder-id="">

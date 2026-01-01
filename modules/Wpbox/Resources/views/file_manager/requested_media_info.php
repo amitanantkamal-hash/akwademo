@@ -1,4 +1,3 @@
-<!-- Brij MOhan Negi Update -->
 @if (!empty($media_info['result']))
 @php
 $items = json_decode($image_data['result'])

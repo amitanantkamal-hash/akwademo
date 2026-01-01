@@ -1,4 +1,3 @@
-{{-- Brij Mohan Negi Update --}}
 @php
     $interactive_action_type = '';
     $interactive_button_id = '';

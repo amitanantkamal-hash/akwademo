@@ -6,7 +6,6 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateRepliesListButtonTemplateTable extends Migration
 {
-    // Brij MOhan Negi Update
     /**
      * Run the migrations.
      *

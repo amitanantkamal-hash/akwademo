@@ -474,7 +474,7 @@ class APIController extends Controller
         ];
     }
 
-    //Get ot make contact  //Last Update by Brij 24Jun
+    //Get ot make contact 
     public function makeContact($name, $phone, $company)
     {
         $contact = Contact::where('company_id', $company->id)->where('phone', $phone)->first();

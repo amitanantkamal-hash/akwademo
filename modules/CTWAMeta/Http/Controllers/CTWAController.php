@@ -447,7 +447,7 @@ class CTWAController extends Controller
             'fields' => 'name,picture',
             'access_token' => $pageToken,
         ]);
-
+        
         if ($profileResponse->failed()) {
             return response()->json(['error' => 'Failed to fetch profile'], 500);
         }

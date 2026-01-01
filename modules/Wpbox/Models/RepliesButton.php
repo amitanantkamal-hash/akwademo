@@ -8,7 +8,6 @@ use App\Scopes\CompanyScope;
 
 class RepliesButton extends Model
 {
-    // Brij Mohan Negi Update
     protected $table = 'replies_button_template';
     public $guarded = [];
 

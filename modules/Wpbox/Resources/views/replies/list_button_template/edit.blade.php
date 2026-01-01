@@ -1,5 +1,4 @@
 @extends('general.index', $setup)
-{{-- Brij Mohan Negi Update --}}
 @section('cardbody')
     <form action="{{ $setup['action'] }}" method="POST" enctype="multipart/form-data">
         @csrf

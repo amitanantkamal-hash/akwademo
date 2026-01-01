@@ -1,4 +1,3 @@
-{{-- Brij Mohan Negi Update --}}
 <div id="fm-selected-mini-{{ $id }}" class="fm-selected-media fm-selected-mini @isset($class) {{ $class }} @endisset"
     data-loading="false" data-result="html" data-select-multi="{{ $select_multi }}">
     <div class="fm-progress-bar bg-primary"></div>

@@ -362,4 +362,9 @@ class User extends Authenticatable
             ->where('status', 0)
             ->latest();
     }
+
+    public function userActiveSubscription(): HasOne
+    {
+        return $this->hasOne(Subscription_Info::class, 'user_id')->where('purchase_date', '<=', now())->where('expire_date', '>=', now())->where('status', '!=', 3)->latest();
+    }
 }

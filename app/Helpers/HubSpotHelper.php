@@ -15,7 +15,6 @@ use HubSpot\Client\Crm\Contacts\Model\PublicObjectSearchRequest;
 
 class HubSpotHelper
 {
-    /* Brij Mohan Negi */
     protected $hubspot;
 
     public function __construct()

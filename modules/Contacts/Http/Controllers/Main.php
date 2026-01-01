@@ -73,7 +73,7 @@ class Main extends Controller
         $fields[0] = ['class' => $class, 'ftype' => 'image', 'name' => 'Avatar', 'id' => 'avatar', 'style' => 'width: 200px; height:200', 'required' => false];
 
         //Add name field
-        $fields[1] = ['class' => $class, 'ftype' => 'input', 'name' => 'Name', 'id' => 'name', 'placeholder' => 'Brij Negi', 'required' => true];
+        $fields[1] = ['class' => $class, 'ftype' => 'input', 'name' => 'Name', 'id' => 'name', 'placeholder' => 'User Name', 'required' => true];
 
         //Add phone field
         $fields[2] = ['class' => $class, 'ftype' => 'input', 'type' => 'phone', 'name' => 'WhatsApp number', 'id' => 'phone', 'placeholder' => '91XXXXXXXXXX', 'required' => true];

@@ -54,6 +54,10 @@ class SubscriptionController extends Controller
     {
         $company            = auth()->user()->resolveCurrentCompany();
         $Subscription       = $company->activeSubscription;
+        if($Subscription == null){
+            $Subscription = auth()->user()->userActiveSubscription;
+        }
+        $active_subscription = $Subscription;
         $billingHistory = [];
         if ($company->stripe_customer_id) {
             $billingHistory = $this->getCustomerPaymentsAndInvoice($company->stripe_customer_id);
@@ -69,10 +73,11 @@ class SubscriptionController extends Controller
             'company'             => $company,
             'team_remaining'      => $teams_remaining,
             'contact_remaining'   => $contacts_remaining,
-            'active_subscription' => $company->activeSubscription,
+            'active_subscription' => $active_subscription,
             'log_detail'          => $log_details,
             'billingHistory'      => $billingHistory,
         ];
+        
         return view('client.subscription.subscription_info', $data);
     }
 

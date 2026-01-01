@@ -15,7 +15,6 @@ use Illuminate\Support\Facades\File;
 class FileManagerController extends Controller
 {
 
-    // Brij MOhan Negi Update
     /**
      * Provide class.
      */
@@ -282,8 +281,8 @@ class FileManagerController extends Controller
 
         $setup = [
             'usefilter' => null,
-            'title' => __('File manager'), //Brij Mohan Negi
-            'fa_icon' => 'fad fa-folders', //Brij Mohan Negi Update
+            'title' => __('File manager'),
+            'fa_icon' => 'fad fa-folders',
             'item_names' => $this->titlePlural,
             'webroute_path' => $this->webroute_path,
             'custom_table' => true,

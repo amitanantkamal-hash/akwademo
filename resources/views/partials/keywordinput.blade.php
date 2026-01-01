@@ -1,4 +1,3 @@
-{{-- Brij Mohan Negi Update --}}
 @isset($separator)
     <br />
     <h4 id="sep{{ $id }}" class="display-4 mb-0">{{ __($separator) }}</h4>

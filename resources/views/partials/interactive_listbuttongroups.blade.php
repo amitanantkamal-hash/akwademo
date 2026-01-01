@@ -1,4 +1,3 @@
-{{-- Brij Mohan Negi Update  --}}
 <div class="mb-4">
     <div class="card-body p-0">
         @if (isset($fields[6]['listbuttons']) && !empty($fields[6]['listbuttons']))

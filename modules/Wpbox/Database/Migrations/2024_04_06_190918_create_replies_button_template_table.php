@@ -13,8 +13,6 @@ class CreateRepliesButtonTemplateTable extends Migration
      */
     public function up()
     {   
-        // Brij Mohan Negi Update
-        
         Schema::create('replies_button_template', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
