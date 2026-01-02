@@ -1,4 +1,4 @@
-<aside class="sidebar-wrapper">
+<aside class="app-sidebar">
     <div class="sidebar-icons">
         <div class="logo">
             <a href="/dashboard">
@@ -21,83 +21,85 @@
                 <img alt="Logo" src="{{ $app_logo }}"/>
             </a>
         </div>
-                        
-        <a href="{{ route('dashboard') }}" class="icon-link @if (Route::currentRouteName() == 'dashboard') active @endif">
-            <span class="icon">
-                <img src="{{ asset('icons/dashboard.png') }}">
-            </span>
-        </a>
-
-        <a href="{{ route('agent.index') }}"
-        class="btn btn-icon btn-custom btn-color-gray-600 btn-active-color-light menu-link w-35px h-35px w-md-40px h-md-40px @if (Route::currentRouteName() == 'agent.index' ||
-                Route::currentRouteName() == 'agent.create' ||
-                Route::currentRouteName() == 'agent.edit') active @endif icon-link">
-            <span class="icon">
-                <img src="{{ asset('icons/people.png') }}">
-            </span>
-        </a>
-
-        <a href="{{ route('embedwhatsapp.edit') }}" class="icon-link @if (Route::currentRouteName() == 'embedwhatsapp.edit') active @endif">
-            <span class="icon">
-                <img src="{{ asset('icons/element.png') }}">
-            </span>
-        </a>
-
-        <a href="{{ route('campaigns.create') }}" class="icon-link @if (Route::currentRouteName() == 'campaigns.create') active @endif">
-            <span class="icon">
-                <img src="{{ asset('icons/broadcast.png') }}">
-            </span>
-        </a>
-
-        <a href="#" id="createContact" class="icon-link @if (Route::currentRouteName() == 'contacts.index' || Route::currentRouteName() == 'contacts.fields.index' ||Route::currentRouteName() == 'contacts.groups.index') active @endif">
-            <span class="icon">
-                <img src="{{ asset('icons/agent.png') }}">
-            </span>
-        </a>
-
-        @if (!auth()->user()->hasrole(['staff']))
-            @if (env('ENABLE_PRICING_FOR_CUSTOMER') == true)
-                <a href="{{ route('available.plans') }}" class="icon-link @if (Route::currentRouteName() == 'available.plans') active @endif">
-                    <span class="icon">
-                        <img src="{{ asset('icons/wallet.png') }}">
-                    </span>
-                </a>
-            @endif  
-        @endif
-
-        @if (!auth()->user()->hasrole(['staff']))
-            <a href="{{ route('admin.apps.company') }}" class="icon-link @if (Route::currentRouteName() == 'admin.apps.company') active @endif">
+        <div class="sidebar-icons-top">       
+            <a href="{{ route('dashboard') }}" class="icon-link @if (Route::currentRouteName() == 'dashboard') active @endif">
                 <span class="icon">
-                    <img src="{{ asset('icons/app.png') }}">
+                    <img src="{{ asset('icons/dashboard.png') }}">
                 </span>
             </a>
-        @endif
 
-        
-        <a href="{{ route('chat.index') }}" class="icon-link @if (Route::currentRouteName() == 'dashboard') active @endif">
-            <span class="icon">
-                <img src="{{ asset('icons/faq.png') }}">
-            </span>
-        </a>
+            <a href="{{ route('agent.index') }}"
+            class="btn btn-icon btn-custom btn-color-gray-600 btn-active-color-light menu-link w-35px h-35px w-md-40px h-md-40px @if (Route::currentRouteName() == 'agent.index' ||
+                    Route::currentRouteName() == 'agent.create' ||
+                    Route::currentRouteName() == 'agent.edit') active @endif icon-link">
+                <span class="icon">
+                    <img src="{{ asset('icons/people.png') }}">
+                </span>
+            </a>
 
-        <hr class="my-17">
-        <a href="#" class="icon-link">
-            <span class="icon">
-                <img src="{{ asset('icons/user.png') }}">
-            </span>
-        </a>
-        
-        <a href="#" class="icon-link">
-            <span class="icon">
-                <img src="{{ asset('icons/setting-2.png') }}">
-            </span>
-        </a>
+            <a href="{{ route('embedwhatsapp.edit') }}" class="icon-link @if (Route::currentRouteName() == 'embedwhatsapp.edit') active @endif">
+                <span class="icon">
+                    <img src="{{ asset('icons/element.png') }}">
+                </span>
+            </a>
 
-        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="icon-link">
-            <span class="icon">
-                <img src="{{ asset('icons/logout.png') }}">
-            </span>
-        </a>
+            <a href="{{ route('campaigns.create') }}" class="icon-link @if (Route::currentRouteName() == 'campaigns.create') active @endif">
+                <span class="icon">
+                    <img src="{{ asset('icons/broadcast.png') }}">
+                </span>
+            </a>
+
+            <a href="#" id="createContact" class="icon-link @if (Route::currentRouteName() == 'contacts.index' || Route::currentRouteName() == 'contacts.fields.index' ||Route::currentRouteName() == 'contacts.groups.index') active @endif">
+                <span class="icon">
+                    <img src="{{ asset('icons/agent.png') }}">
+                </span>
+            </a>
+
+            @if (!auth()->user()->hasrole(['staff']))
+                @if (env('ENABLE_PRICING_FOR_CUSTOMER') == true)
+                    <a href="{{ route('available.plans') }}" class="icon-link @if (Route::currentRouteName() == 'available.plans') active @endif">
+                        <span class="icon">
+                            <img src="{{ asset('icons/wallet.png') }}">
+                        </span>
+                    </a>
+                @endif  
+            @endif
+
+            @if (!auth()->user()->hasrole(['staff']))
+                <a href="{{ route('admin.apps.company') }}" class="icon-link @if (Route::currentRouteName() == 'admin.apps.company') active @endif">
+                    <span class="icon">
+                        <img src="{{ asset('icons/app.png') }}">
+                    </span>
+                </a>
+            @endif
+
+            
+            <a href="{{ route('chat.index') }}" class="icon-link @if (Route::currentRouteName() == 'dashboard') active @endif">
+                <span class="icon">
+                    <img src="{{ asset('icons/faq.png') }}">
+                </span>
+            </a>
+        </div>
+        <!-- BOTTOM ICONS -->
+        <div class="sidebar-icons-bottom">
+            <a  id="switchAccountModal" tabindex="-1" aria-hidden="true" href="javascript:void(0);" class="icon-link" data-bs-toggle="modal" data-bs-target="#createOrgModal">
+                <span class="icon">
+                    <img src="{{ asset('icons/user.png') }}">
+                </span>
+            </a> 
+            
+            <a href="#" class="icon-link">
+                <span class="icon">
+                    <img src="{{ asset('icons/setting-2.png') }}">
+                </span>
+            </a>
+
+            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="icon-link">
+                <span class="icon">
+                    <img src="{{ asset('icons/logout.png') }}">
+                </span>
+            </a>
+        </div>
     </div>
 
     {{-- MENU PANEL --}}
@@ -191,7 +193,7 @@
             <!-- Contacts End -->
 
             <!-- Templates -->
-            <li class="menu-item @if (Route::currentRouteName() == 'dashboard') active @endif">
+            <li class="menu-item @if (Route::currentRouteName() == 'templates.index') active @endif">
                 <a href="{{ route('templates.index') }}">
                     <i class="ri-file-list-line"></i>
                     <span>Templates</span>

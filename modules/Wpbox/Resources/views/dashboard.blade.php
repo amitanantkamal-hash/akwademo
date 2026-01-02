@@ -1,3 +1,36 @@
+<!-- this is dashboard view file. Code by amit pawar date- 02/01/2026 -->
+<div class="row col-12">
+    <div class="col-lg-6 col-md-6 order-1 order-md-2 mb-4 mb-md-0">
+        <div class="card min-h-150px min-h-md-205px bg-success border-0 mb-5 mb-xl-6 overflow-hidden"
+            style="background-image: url({{ asset('backend/Assets/img/dashBan3.png') }});
+            background-position: right bottom;
+            background-size: auto 80%;
+            background-repeat: no-repeat; 
+            background-color: #0a8f7a !important;">
+            <div class="card-body d-flex flex-column justify-content-center ps-6 ps-lg-12 py-6">
+                <h6 class="text-white fs-3 fs-md-2qx fw-bold mb-3">
+                    {{ __('Hey') }} {{ auth()->user()->name }},
+                </h6>
+                <li class="text-white fs-5 fs-md-4 mb-7">
+                    {{ __('Real Time Notifications') }}
+                </li>
+                <li class="text-white fs-5 fs-md-4 mb-7">
+                    {{ __('Live Chat') }}
+                </li>
+                <li class="text-white fs-5 fs-md-4 mb-7">
+                    {{ __('Ads Mangagement') }}
+                </li>
+            </div>
+        </div>
+        
+    </div>
+    <div class="col-lg-6 col-md-6 order-1 order-md-2 mb-4 mb-md-0">
+            @include('wpbox::info_verified')    
+        </div>
+    
+    
+</div>
+
 @if (auth()->user()->hasrole('owner') || auth()->user()->hasrole('staff'))
     <!-- Action Buttons Section -->
     {{-- <div class="row mb-7">

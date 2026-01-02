@@ -1,0 +1,341 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Inter, sans-serif;
+    background: #f6f8fb;
+}
+
+/* ================= ROOT LAYOUT ================= */
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* ================= SIDEBAR ================= */
+.app-sidebar {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch;
+    top: 0 !important;     /* 🔥 FORCE TOP */
+    left: 0;
+    height: 100vh;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+
+    z-index: 1000;
+}
+
+/* 2. Green icon bar (LEFT) */
+.sidebar-icons {
+    width: 72px !important;
+    min-width: 72px !important;
+    max-width: 72px !important;
+
+    background: #0a8f7a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    overflow-y: auto;          /* 🔥 ENABLE SCROLL */
+    overflow-x: hidden;
+}
+
+/* 3. White menu panel (RIGHT of icons) */
+.sidebar-menu {
+    width: 260px !important;
+    min-width: 260px !important;
+    max-width: 260px !important;
+
+    background: #ffffff;
+    border-right: 1px solid #e5e7eb;
+    padding: 16px;
+    overflow-y: auto;
+    flex-shrink: 0;
+}
+
+/* Top icons */
+.sidebar-icons-top {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Bottom icons */
+.sidebar-icons-bottom {
+    margin-top: auto;      /* 🔥 pushes to bottom */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 0 12px;
+    position: relative;    /* 🔥 REQUIRED for ::before */
+}
+
+/* Separator line */
+.sidebar-icons-bottom::before {
+    content: "";
+    position: absolute;
+    top: 0;                /* top of bottom container */
+    left: 12px;
+    right: 12px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+/* LOGO */
+.logo {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    max-height: 100px;
+    width: auto;
+}
+
+/* ICON LINKS */
+.icon-link {
+    width: 44px;
+    height: 44px;
+    margin: 8px 0;
+    border-radius: 10px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-link.active,
+.icon-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* ================= MENU PANEL ================= */
+/* .sidebar-menu {
+    width: 260px;
+    min-width: 260px;
+    background: #ffffff;
+    border-right: 1px solid #e5e7eb;
+    padding: 16px;
+    overflow-y: auto;
+} */
+
+/* SEARCH */
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #e5e7eb;
+    padding: 8px 10px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+/* MENU LIST */
+.sidebar-menu ul {
+    list-style: none;
+}
+
+.sidebar-menu li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #1f2937;
+}
+
+.sidebar-menu li i {
+    font-size: 18px;
+}
+
+.sidebar-menu li .plus {
+    margin-left: auto;
+    font-size: 16px;
+}
+
+.sidebar-menu li.active,
+.sidebar-menu li:hover {
+    background: #e6f4f1;
+    color: #0a8f7a;
+}
+
+/* ================= MAIN AREA ================= */
+.app-main {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ================= HEADER ================= */
+.app-header {
+    height: 64px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    top: 0;
+    left: 332px !important; /* 72 + 260 */
+    right: 0;
+    height: 64px;
+}
+
+/* ================= CONTENT ================= */
+.app-content {
+    flex: 1;
+    padding: 24px;
+    overflow-y: auto;
+}
+
+/* ================= SUBMENU ================= */
+.submenu {
+    display: none;
+    margin-left: 26px;
+    padding-left: 14px;
+    position: relative;
+}
+
+.submenu::before {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #d1d5db;
+}
+
+.submenu li {
+    padding: 6px 0 6px 16px;
+    position: relative;
+}
+
+.submenu li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 10px;
+    height: 1px;
+    background: #d1d5db;
+}
+
+.has-submenu.open > .submenu {
+    display: block;
+}
+
+.has-submenu.open > .plus {
+    transform: rotate(45deg);
+}
+
+/* ================================================= */
+/* ================= RESPONSIVE ==================== */
+/* ================================================= */
+
+/* ---------- LAPTOP (≤1200px) ---------- */
+@media (max-width: 1200px) {
+    .sidebar-menu {
+        width: 230px;
+    }
+}
+
+/* ---------- TABLET (≤992px) ---------- */
+@media (max-width: 992px) {
+    .sidebar-menu {
+        width: 220px !important;
+        min-width: 220px !important;
+        max-width: 220px !important;
+    }
+
+    .app-content {
+        padding: 18px;
+    }
+}
+
+/* ---------- MOBILE (≤768px) ---------- */
+@media (max-width: 768px) {
+
+    .app-layout {
+        flex-direction: column;
+    }
+
+    .app-sidebar {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .sidebar-icons {
+        width: 64px !important;
+        min-width: 64px !important;
+        max-width: 64px !important;
+    }
+
+    .sidebar-menu {
+        width: 200px !important;
+        min-width: 200px !important;
+        max-width: 200px !important;
+    }
+
+    .app-header {
+        padding: 0 14px;
+    }
+
+    .app-content {
+        padding: 16px;
+    }
+}
+
+/* ---------- SMALL MOBILE (≤480px) ---------- */
+@media (max-width: 480px) {
+    .sidebar-menu {
+        width: 180px !important;
+        min-width: 180px !important;
+        max-width: 180px !important;
+    }
+
+    .sidebar-menu li {
+        font-size: 13px;
+    }
+
+    .app-content {
+        padding: 12px;
+    }
+}
+
+/* ================= test card color check ================= */
+
+.card-strip {
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+.card-strip-top {
+    height: 8px;
+    background: #0a8f7a; /* single color strip */
+}
+
+.card-strip-body {
+    padding: 20px;
+}
