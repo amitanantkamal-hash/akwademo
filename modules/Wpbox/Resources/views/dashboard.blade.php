@@ -1,3 +1,36 @@
+<!-- this is dashboard view file. Code by amit pawar date- 02/01/2026 -->
+<div class="row col-12">
+    <div class="col-lg-6 col-md-6 order-1 order-md-2 mb-4 mb-md-0">
+        <div class="card min-h-150px min-h-md-205px bg-success border-0 mb-5 mb-xl-6 overflow-hidden"
+            style="background-image: url({{ asset('backend/Assets/img/dashBan3.png') }});
+            background-position: right bottom;
+            background-size: auto 80%;
+            background-repeat: no-repeat; 
+            background-color: #0a8f7a !important;">
+            <div class="card-body d-flex flex-column justify-content-center ps-6 ps-lg-12 py-6">
+                <h6 class="text-white fs-3 fs-md-2qx fw-bold mb-3">
+                    {{ __('Hey') }} {{ auth()->user()->name }},
+                </h6>
+                <li class="text-white fs-5 fs-md-4 mb-7">
+                    {{ __('Real Time Notifications') }}
+                </li>
+                <li class="text-white fs-5 fs-md-4 mb-7">
+                    {{ __('Live Chat') }}
+                </li>
+                <li class="text-white fs-5 fs-md-4 mb-7">
+                    {{ __('Ads Mangagement') }}
+                </li>
+            </div>
+        </div>
+        
+    </div>
+    <div class="col-lg-6 col-md-6 order-1 order-md-2 mb-4 mb-md-0">
+            @include('wpbox::info_verified')    
+        </div>
+    
+    
+</div>
+
 @if (auth()->user()->hasrole('owner') || auth()->user()->hasrole('staff'))
     <!-- Action Buttons Section -->
     {{-- <div class="row mb-7">
@@ -678,19 +711,18 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h2 class="fw-bold">Switch Organization Account</h2>
-                    {{-- <div class="card-toolbar">
+                    <div class="card-toolbar">
                         @if (config('settings.enable_create_company', true))
-                            <a href="javascript:void(0);" class="btn btn-sm btn-info" data-bs-toggle="modal"
-                                data-bs-target="#createOrgModal"
-                                data-bs-original-title="{{ __('Add new organization') }}">
+                            
+                            <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#createOrgModals" data-bs-original-title="{{ __('Add new organization') }}">
                                 <i class="ki-duotone ki-plus fs-2 me-1">
                                     <span class="path1"></span>
                                     <span class="path2"></span>
                                 </i>
                                 {{ __('New Organization') }}
-                            </a>
+                            </button>
                         @endif
-                    </div> --}}
+                    </div> 
                     <div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal">
                         <i class="ki-duotone ki-cross fs-1">
                             <span class="path1"></span>
@@ -784,7 +816,47 @@
         </div>
     </div>
 @endif
+<!-- new org add code by amit pawar-->
+    <div class="modal fade" id="createOrgModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static"
+        data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="fw-bold">{{ __('Create new organization') }}</h2>
+                    <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+                        <span class="svg-icon svg-icon-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor"></rect>
+                                <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor"></rect>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+                <div class="modal-body py-10 px-4">
+                    <form action="{{ route('admin.organizations.create') }}" method="POST">
+                        @csrf
+                        <div class="fv-row mb-10">
+                            <input type="text" class="form-control form-control-solid" id="organization_name" placeholder="{{ __('Organization name') }}" name="name" required>
+                        </div>
 
+                        <div class="d-flex justify-content-end">
+                            <button type="button" class="btn btn-light me-3" data-bs-dismiss="modal">{{ __('Cancel') }}</button>
+                            <button type="submit" class="btn btn-info">
+                                <span class="svg-icon svg-icon-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path opacity="0.3" d="M10.3 14.3L11 13.6L7.70002 10.3C7.30002 9.9 6.7 9.9 6.3 10.3C5.9 10.7 5.9 11.3 6.3 11.7L10.3 15.7C10.7 16.1 11.3 16.1 11.7 15.7C12.1 15.3 12.1 14.7 11.7 14.3H10.3Z" fill="currentColor"></path>
+                                        <path d="M22 12C22 17.5 17.5 22 12 22C6.5 22 2 17.5 2 12C2 6.5 6.5 2 12 2C17.5 2 22 6.5 22 12ZM11.7 15.7C11.3 16.1 10.7 16.1 10.3 15.7L6.3 11.7C5.9 11.3 5.9 10.7 6.3 10.3C6.7 9.9 7.30002 9.9 7.70002 10.3L11 13.6L10.3 14.3H11.7C12.1 14.7 12.1 15.3 11.7 15.7Z" fill="currentColor"></path>
+                                    </svg>
+                                </span>
+                                {{ __('Create') }}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- new org end -->
 @push('js')
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>

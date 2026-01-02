@@ -43,7 +43,7 @@ class Campaign extends Model
         });
     }
 
-   public function shouldWeUseIt($receivedMessage, Contact $contact) //Brij Mohan Negi Update
+   public function shouldWeUseIt($receivedMessage, Contact $contact)
     {
         $receivedMessage = " " . strtolower($receivedMessage);
         $message = "";
@@ -62,7 +62,7 @@ class Campaign extends Model
             foreach ($triggerValues as $trigger) {
                 if ($this->bot_type == 2) {
                     // Exact match
-					$trigger = " " . strtolower($trigger); //Brij Mohan Negi Update
+					$trigger = " " . strtolower($trigger);
                     if ($receivedMessage == $trigger) {
                         $sendThisCampaign = true;
                         break; // exit the loop once a match is found
@@ -80,7 +80,7 @@ class Campaign extends Model
             if ($this->bot_type == 2) {
                 // Exact match
 				
-				$triggerValues = " " . strtolower($triggerValues); //Brij Mohan Negi Update
+				$triggerValues = " " . strtolower($triggerValues);
                 if ($receivedMessage == $triggerValues) {
                     $sendThisCampaign = true;
                 }

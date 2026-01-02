@@ -102,7 +102,6 @@ class CreateNewUser implements CreatesNewUsers
     //     }
     //     $user->company_id = $lastCompanyId;
     //     $user->update();
-    //     // //by brij negi
     //     // // Get form data
     //     // if (!empty($input['email']) && !empty($input['name']) && !empty($phone)) {
     //     //     $contactData = [

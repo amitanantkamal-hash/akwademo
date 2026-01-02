@@ -43,13 +43,12 @@
     <div class="card card-flush mb-5">
         <div class="card-header">
             <div class="card-title d-flex align-items-center gap-3">
-                @if ($company->getConfig('profile_picture_url', '') != '')
-                    <img src="{{ $company->getConfig('profile_picture_url', '') }}" alt="Profile Picture"
-                        class="rounded-circle shadow border"
-                        style="width: 50px; height: 50px; object-fit: cover; border: 3px solid #ddd;">
-                @endif
+                <i class="ki-duotone ki-whatsapp fs-2hx text-success">
+                    <span class="path1"></span>
+                    <span class="path2"></span>
+                </i>
                 <span class="text-gray-800 text-hover-primary fs-4 fw-bold">
-                    {{ $company->getConfig('verified_name', 'N/A') }}
+                    {{ __('WhatsApp Business Details') }}
                 </span>
             </div>
             <div class="card-toolbar">
@@ -60,6 +59,16 @@
             <div class="border rounded p-4 mb-4">
                 <div class="d-flex align-items-center justify-content-between">
                     <div class="w-75">
+                        <div class="fs-5 fw-bold d-flex align-items-center">
+                            @if (strtolower($company->getConfig('name_status', '')) === 'approved')
+                                <i class="ki-duotone ki-check-circle fs-2 text-success me-2">
+                                    <span class="path1"></span>
+                                    <span class="path2"></span>
+                                </i>
+                            @endif
+                            {{ $company->getConfig('verified_name', 'N/A') }}
+                        </div>
+
                         <div class="text-gray-700 mt-2">
                             <span class="fw-bold">{{ __('Display Name Status') }}:</span>
                             <span
@@ -74,14 +83,34 @@
                         </div>
 
                         <div class="text-gray-700 mt-2">
+                            <span class="fw-bold">{{ __('Quality Rating') }}:</span>
+                            <span
+                                class="badge badge-light-{{ strtolower($company->getConfig('quality_rating', '')) === 'green' ? 'success' : (strtolower($company->getConfig('quality_rating', '')) === 'yellow' ? 'warning' : 'danger') }}">
+                                {{ $company->getConfig('quality_rating', 'N/A') }}
+                            </span>
+                        </div>
+                         <div class="text-gray-700 mt-2">
+                            <span class="fw-bold">{{ __('Messaging Limit') }}:</span>
+                            {{ $company->getConfig('messaging_limit_tier', 'N/A') }}
+                        </div>
+                         <div class="text-gray-700 mt-2">
+                            <span class="fw-bold">{{ __('Can Send Message') }}:</span>
+                            {{ $company->getConfig('can_send_message', 'N/A') }}
+                        </div>
+                        <div class="text-gray-700 mt-2">
                             <span class="fw-bold">{{ __('Organization') }}:</span>
                             <span class="text-info">{{ $company->name }}</span>
                         </div>
                     </div>
-                    
+                    @if ($company->getConfig('profile_picture_url', '') != '')
+                        <img src="{{ $company->getConfig('profile_picture_url', '') }}" alt="Profile Picture"
+                            class="rounded-circle shadow border"
+                            style="width: 100px; height: 100px; object-fit: cover; border: 3px solid #ddd;">
+                    @endif
                 </div>
             </div>
-            <!-- <div class="d-flex flex-wrap gap-2">
+            <div class="d-flex flex-wrap gap-2">
+                <!-- Copy Link Button -->
                 <button onclick="copyWhatsAppLink()" class="btn btn-icon btn-sm btn-light-primary"
                     data-bs-toggle="tooltip" title="Copy WhatsApp Link">
                     <i class="ki-duotone ki-copy fs-2">
@@ -90,6 +119,8 @@
                     </i>
                 </button>
 
+
+                <!-- Switch Account Button -->
                 <button type="button" class="btn btn-icon btn-sm btn-light-primary" data-bs-toggle="modal"
                     data-bs-target="#switchAccountModal" data-bs-toggle="tooltip" title="Switch Account">
                     <i class="ki-duotone ki-switch fs-2">
@@ -101,6 +132,7 @@
                     </i>
                 </button> 
 
+                <!-- Open Chat Button -->
                 <a href="https://wa.me/{{ str_replace([' ', '+'], '', $company->getConfig('display_phone_number', '11111111')) }}"
                     target="_blank" class="btn btn-icon btn-sm btn-light-primary" data-bs-toggle="tooltip"
                     title="Start Chat">
@@ -109,7 +141,7 @@
                         <span class="path2"></span>
                     </i>
                 </a>
-            </div> -->
+            </div>
         </div>
     </div>
 @endif

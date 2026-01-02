@@ -510,13 +510,13 @@
                                 <div class="col-md-6">
                                     <label class="form-label fs-6 fw-semibold text-gray-700">Name</label>
                                     <input type="text" name="for_person" class="form-control form-control-solid"
-                                        placeholder="BRIJ" value="{{ $order->for_person }}" required>
+                                        placeholder="USER NAME" value="{{ $order->for_person }}" required>
                                 </div>
 
                                 <div class="col-md-6">
                                     <label class="form-label fs-6 fw-semibold text-gray-700">Phone number</label>
                                     <input type="text" name="for_person_number"
-                                        class="form-control form-control-solid" placeholder="+9199XXXXXXXXX"
+                                        class="form-control form-control-solid" placeholder="+9193XXXXXXXXX"
                                         value="{{ $order->for_person_number }}" required>
                                 </div>
                                 <div class="col-12">

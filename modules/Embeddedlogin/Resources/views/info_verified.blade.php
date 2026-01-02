@@ -125,7 +125,7 @@
 
 
                 <!-- Switch Account Button -->
-                <!-- <button type="button" class="btn btn-icon btn-sm btn-light-primary" data-bs-toggle="modal"
+                <button type="button" class="btn btn-icon btn-sm btn-light-primary" data-bs-toggle="modal"
                     data-bs-target="#switchAccountModal" data-bs-toggle="tooltip" title="Switch Account">
                     <i class="ki-duotone ki-switch fs-2">
                         <span class="path1"></span>
@@ -134,7 +134,7 @@
                         <span class="path4"></span>
                         <span class="path5"></span>
                     </i>
-                </button> -->
+                </button>
 
                 <!-- Open Chat Button -->
                 <a href="https://wa.me/{{ str_replace([' ', '+'], '', $company->getConfig('display_phone_number', '11111111')) }}"
@@ -161,7 +161,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h2 class="fw-bold">Switch Organization Account</h2>
-                    {{-- <div class="card-toolbar">
+                     <div class="card-toolbar">
                         @if (config('settings.enable_create_company', true))
                             <a href="javascript:void(0);" class="btn btn-sm btn-info" data-bs-toggle="modal"
                                 data-bs-target="#createOrgModal"
@@ -173,7 +173,7 @@
                                 {{ __('New Organization') }}
                             </a>
                         @endif
-                    </div> --}}
+                    </div>
                     <div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal">
                         <i class="ki-duotone ki-cross fs-1">
                             <span class="path1"></span>

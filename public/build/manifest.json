@@ -3,7 +3,7 @@
     "file": "assets/popper-bd0f1ac6.js"
   },
   "modules/BotFlow/Resources/assets/css/app.css": {
-    "file": "assets/app-0beb5e1d.css",
+    "file": "assets/app-c9d60a57.css",
     "isEntry": true,
     "src": "modules/BotFlow/Resources/assets/css/app.css"
   },
@@ -13,18 +13,18 @@
     "src": "modules/BotFlow/Resources/assets/css/tenant-app.css"
   },
   "modules/BotFlow/Resources/assets/js/app.css": {
-    "file": "assets/app-bc1e5f8a.css",
+    "file": "assets/app-5552c096.css",
     "src": "modules/BotFlow/Resources/assets/js/app.css"
   },
   "modules/BotFlow/Resources/assets/js/app.js": {
     "css": [
-      "assets/app-bc1e5f8a.css"
+      "assets/app-5552c096.css"
     ],
     "dynamicImports": [
       "node_modules/intl-tel-input/build/js/utils.js",
       "node_modules/intl-tel-input/build/js/utils.js"
     ],
-    "file": "assets/app-d1130f6c.js",
+    "file": "assets/app-aeae39d5.js",
     "imports": [
       "_popper-bd0f1ac6.js"
     ],

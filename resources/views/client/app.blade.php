@@ -17,7 +17,7 @@
 
     {{-- CSS --}}
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/client_sidebar.css') }}"> 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
 
@@ -266,7 +266,7 @@
 
     @include('client.partials.theme')
     <div class="d-flex flex-column flex-root app-root" id="kt_app_root">
-        <div class="app-page  flex-column flex-column-fluid" id="kt_app_page">
+        <div class="app-layout flex-column flex-column-fluid" id="kt_app_page">
             @include('client.partials.header')
             <div class="app-wrapper  flex-column flex-row-fluid" id="kt_app_wrapper">
                 @auth()

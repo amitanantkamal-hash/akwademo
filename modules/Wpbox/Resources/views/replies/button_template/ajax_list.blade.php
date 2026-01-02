@@ -1,4 +1,3 @@
-{{-- Brij Mohan Negi Update --}}
 @if (!empty($result))
 
     @foreach ($result as $key => $item)

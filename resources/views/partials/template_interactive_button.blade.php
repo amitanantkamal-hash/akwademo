@@ -1,4 +1,3 @@
-{{-- Brij Mohan Negi Update --}}
 <div class="card b-r-6">
     <div class="card-header bg-light-primary border-0">
         <h3 class="card-title text-gray-800 fs-2 fw-bolder">{{ __('Button List') }}</h3>

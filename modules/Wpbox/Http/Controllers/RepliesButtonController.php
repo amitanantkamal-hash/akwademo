@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Modules\Contacts\Models\Group;
 
-//Brij MOhan Negi Update
 class RepliesButtonController extends Controller
 {
     //
@@ -176,22 +175,20 @@ class RepliesButtonController extends Controller
     // {
     //     $this->authChecker();
 
-    //     $fields = $this->getFields('col-md-12'); //Brij Mohan Negi Update col-md-12
-    //     //Brij MOhan Negi Update
+    //     $fields = $this->getFields('col-md-12');=
     //     $groups = Group::pluck('name', 'id');
     //     $fields[1]['groups'] = $groups;
 
-    //     //Brij MOhan Negi Update
     //     $users = $this->getCompany()->users()->pluck('name', 'id');
     //     $fields[1]['users'] = $users;
 
     //     return view('general.form', [
     //         'setup' => [
-    //             'title' => __('Create Interactive - Button group'), //__('crud.new_item', ['item'=>__('text bot')]), //Brij Mohan Negi Update
+    //             'title' => __('Create Interactive - Button group'), //__('crud.new_item', ['item'=>__('text bot')]),
     //             'fa_icon' => 'fad fa-pager',
     //             'action_link' => route($this->webroute_path . 'index'),
     //             'action_name' => __('crud.back'),
-    //             'action_icon' => 'fa fa-arrow-left', //Brij Mohan Negi Update
+    //             'action_icon' => 'fa fa-arrow-left',
     //             'iscontent' => true,
     //             'action' => route($this->webroute_path . 'store'),
     //         ],
@@ -390,11 +387,9 @@ class RepliesButtonController extends Controller
         $fields[0]['value'] = $button->name;
         $fields[1]['template'] = $button->template;
 
-        //Brij MOhan Negi Update
         $groups = Group::pluck('name', 'id');
         $fields[1]['groups'] = $groups;
 
-        //Brij MOhan Negi Update
         $users = $this->getCompany()->users()->pluck('name', 'id');
         $fields[1]['users'] = $users;
 
@@ -404,7 +399,7 @@ class RepliesButtonController extends Controller
         return view($this->view_path . 'edit', [
             'setup' => [
                 'title' => __('Edit buttons group'), //__('crud.edit_item_name', ['item' => __($this->title), 'name' => $reply->name]),
-                'fa_icon' => 'fad fa-reply-all', //Brij Mohan Negi Update
+                'fa_icon' => 'fad fa-reply-all',
                 'action_link' => route($this->webroute_path . 'index'),
                 'action_name' => __('crud.back'),
                 'action_icon' => 'fa fa-arrow-left',
@@ -564,8 +559,7 @@ class RepliesButtonController extends Controller
         $item->template = json_encode($btn_template);
 
         $item->update();
-        // Brij MOhan Negi Update
-
+        
         return redirect()
             ->route($this->webroute_path . 'index')
             ->withStatus(__('crud.item_has_been_updated', ['item' => __($this->title)]));

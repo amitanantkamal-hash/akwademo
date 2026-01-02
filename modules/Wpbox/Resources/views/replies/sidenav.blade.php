@@ -1,4 +1,3 @@
-{{-- Brij Mohan Negi Update --}}
 <div class="sub-sidebar bg-white d-flex flex-column flex-row-auto">
     <div class="d-flex mb-10 p-20">
         <div class="d-flex align-items-center w-lg-400px">

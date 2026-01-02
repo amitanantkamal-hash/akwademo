@@ -50,7 +50,7 @@ class DashboardController extends Controller
 
         //The current logged in user
         $currentUser = auth()->user();
-
+        
         //Finish tasks
         if (isset($_GET['task_done'])) {
             $currentUser->setConfig('task_done_' . $_GET['task_done'], true);
@@ -89,8 +89,6 @@ class DashboardController extends Controller
             $view = 'dashboard::index-client';
         }
 
-
-        //code by brij
         //don't show world map data on admin user
         $dataToSend = [];
         $auth_user_id = auth()->user()->id;

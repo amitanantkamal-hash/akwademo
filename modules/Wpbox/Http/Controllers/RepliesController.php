@@ -223,14 +223,13 @@ class RepliesController extends Controller
 
         $isBot = request()->has('type') && request()->get('type') === 'bot';
 
-        $fields = $this->getFields('col-md-12', $isBot ? 'bot' : 'qr'); //Brij Mohan Negi Update col-md-12
+        $fields = $this->getFields('col-md-12', $isBot ? 'bot' : 'qr');
 
         if ($isBot) {
             //Unset the 2nd field, first option
             // unset($fields[3]['data'][1]);
             // $fields[3]['value'] = 2;
 
-            //Brij MOhan Negi Update
             $buttons = RepliesButton::pluck('name', 'id');
             $fields[6]['buttons'] = $buttons;
 
@@ -239,11 +238,11 @@ class RepliesController extends Controller
 
             return view($this->view_path . 'create', [
                 'setup' => [
-                    'title' => __('Create new bot'), //__('crud.new_item', ['item'=>__('text bot')]), //Brij Mohan Negi Update
+                    'title' => __('Create new bot'), //__('crud.new_item', ['item'=>__('text bot')]),
                     'fa_icon' => 'fad fa-user-robot',
                     'action_link' => route($this->webroute_path . 'index', ['type' => 'bot']),
                     'action_name' => __('crud.back'),
-                    'action_icon' => 'fa fa-arrow-left', //Brij Mohan Negi Update
+                    'action_icon' => 'fa fa-arrow-left',
                     'iscontent' => true,
                     'isBot' => true,
                     'action' => route($this->webroute_path . 'store'),
@@ -256,11 +255,11 @@ class RepliesController extends Controller
             unset($fields[3]['data'][4]);
             return view($this->view_path . 'create', [
                 'setup' => [
-                    'title' => __('Create quick reply'), //__('crud.new_item', ['item'=>__('Quick Reply')]), //Brij Mohan Negi Update
+                    'title' => __('Create quick reply'), //__('crud.new_item', ['item'=>__('Quick Reply')]),
                     'fa_icon' => 'fad fa-reply-all',
                     'action_link' => route($this->webroute_path . 'index', ['type' => 'qr']),
                     'action_name' => __('crud.back'),
-                    'action_icon' => 'fa fa-arrow-left', //Brij Mohan Negi Update
+                    'action_icon' => 'fa fa-arrow-left',
                     'iscontent' => true,
                     'isBot' => false,
                     'action' => route($this->webroute_path . 'store'),
@@ -281,7 +280,7 @@ class RepliesController extends Controller
     //         'name' => $request->name,
     //         'text' => $request->caption_text,
     //         'type' => $request->type,
-    //         'is_bot_active' => 1, //Brij Mohan Negi Update
+    //         'is_bot_active' => 1,
     //     ]);
     //     if ($request->type != 1) {
 
@@ -318,7 +317,7 @@ class RepliesController extends Controller
     //         }
 
     //         //Bot
-    //         $field->trigger = $request->trigger; //Brij Mohan Negi Update
+    //         $field->trigger = $request->trigger;
     //         $field->header = $request->header_text;
     //         $field->footer = $request->footer_text;
     //         $field->header_type = $request->header_type;
@@ -353,7 +352,6 @@ class RepliesController extends Controller
 
     //     $field->save();
 
-    //     // Brij MOhan Negi Update
     //     if ($request->type != 1) {
     //         return redirect()->route($this->webroute_path . 'index')->withStatus(__('crud.item_has_been_added', ['item' => __($this->title)]));
     //     } else {
@@ -489,7 +487,7 @@ class RepliesController extends Controller
     //     // Return JSON response when request is AJAX
     // }
 
-    //Activate bot Brij Mohan Negi Update
+    //Activate bot
     public function activateBot(Reply $reply)
     {
         $reply->is_bot_active = true;
@@ -499,7 +497,7 @@ class RepliesController extends Controller
             ->withStatus(__('Bot activated'));
     }
 
-    //Deactivate bot Brij Mohan Negi Update
+    //Deactivate bot
     public function deactivateBot(Reply $reply)
     {
         $reply->is_bot_active = false;
@@ -525,12 +523,11 @@ class RepliesController extends Controller
     //     // $fields[2]['value'] = $reply->type;
 
     //     // if ($reply->type != 1) {
-    //     //     $fields[3]['value'] = $reply->trigger; //Brij Mohan Negi Update
+    //     //     $fields[3]['value'] = $reply->trigger;
     //     //     $fields[4]['value'] = $reply->header;
     //     //     $fields[5]['value'] = $reply->footer;
-    //     //     $fields[6]['value'] = $reply->button1; //Brij Mohan Negi Update
+    //     //     $fields[6]['value'] = $reply->button1;
 
-    //     //     //Brij MOhan Negi Update
     //     //     $buttons = RepliesButton::pluck('name', 'id');
     //     //     $fields[6]['buttons'] = $buttons;
 
@@ -563,7 +560,6 @@ class RepliesController extends Controller
 
     //         $reply['action_type'] = $action_type;
 
-    //         //Brij MOhan Negi Update
     //         $buttons = RepliesButton::pluck('name', 'id');
     //         $fields[6]['buttons'] = $buttons;
 
@@ -574,7 +570,7 @@ class RepliesController extends Controller
     //     return view($this->view_path . 'edit', [
     //         'setup' => [
     //             'title' => __($title), //__('crud.edit_item_name', ['item' => __($this->title), 'name' => $reply->name]),
-    //             'fa_icon' => 'fad fa-reply-all', //Brij Mohan Negi Update
+    //             'fa_icon' => 'fad fa-reply-all',
     //             'action_link' => route($this->webroute_path . 'index', ['type' => $reply->type == 1 ? 'qr' : 'bot']),
     //             'action_name' => __('crud.back'),
     //             'action_icon' => 'fa fa-arrow-left',
@@ -729,7 +725,7 @@ class RepliesController extends Controller
     //             }
     //         }
 
-    //         $item->trigger = $request->trigger; //Brij Mohan Negi Update
+    //         $item->trigger = $request->trigger;
     //         $item->header = $request->header_text;
     //         $item->footer = $request->footer_text;
     //         $item->header_type = $request->header_type;
@@ -760,7 +756,6 @@ class RepliesController extends Controller
     //         $item->interactive_template_group = json_encode($template_group);
     //     }
     //     $item->update();
-    //     // Brij MOhan Negi Update
     //     if ($request->type != 1) {
     //         return redirect()
     //             ->route($this->webroute_path . 'index')

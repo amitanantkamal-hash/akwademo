@@ -90,21 +90,21 @@ Route::group(
                 Route::post('/file-manager/create-folder', 'FileManagerController@createFolder')->name('file-manager.create_folder'); //created by amit pawar 14-11-2025
                 Route::get('/folder/{id}/files', 'FileManagerController@getFilesByFolder')->name('file-manager.folder_files'); //created by amit pawar 18-11-2025
 
-                //Replies Button Template Brij Mohan Negi Update
+                //Replies Button Template
                 Route::get('button_template', 'RepliesButtonController@index')->name('button_template.index');
                 Route::get('button_template/create', 'RepliesButtonController@create')->name('button_template.create');
                 Route::post('button_template', 'RepliesButtonController@store')->name('button_template.store');
                 Route::post('button_template/fetch_interactive', 'RepliesButtonController@fetch_interactive')->name('button_template.fetch_interactive');
-                Route::post('button_template/ajax_list', 'RepliesButtonController@ajax_list')->name('button_template.ajax_list'); //Brij Mohan Negi Update
+                Route::post('button_template/ajax_list', 'RepliesButtonController@ajax_list')->name('button_template.ajax_list');
                 Route::get('button_template/{button}/edit', 'RepliesButtonController@edit')->name('button_template.edit');
                 Route::put('button_template/{button}', 'RepliesButtonController@update')->name('button_template.update');
                 Route::delete('button_template/del/{button}', 'RepliesButtonController@destroy')->name('button_template.delete');
 
-                //Replies Button Template Brij Mohan Negi Update
+                //Replies Button Template
                 Route::get('list_button_template', 'RepliesListButtonController@index')->name('list_button_template.index');
                 Route::get('list_button_template/create', 'RepliesListButtonController@create')->name('list_button_template.create');
                 Route::post('list_button_template/fetch_interactive', 'RepliesListButtonController@fetch_interactive')->name('list_button_template.fetch_interactive');
-                Route::post('list_button_template/ajax_list', 'RepliesListButtonController@ajax_list')->name('list_button_template.ajax_list'); //Brij Mohan Negi Update
+                Route::post('list_button_template/ajax_list', 'RepliesListButtonController@ajax_list')->name('list_button_template.ajax_list');
                 Route::post('list_button_template', 'RepliesListButtonController@store')->name('list_button_template.store');
                 Route::get('list_button_template/{button}/edit', 'RepliesListButtonController@edit')->name('list_button_template.edit');
                 Route::put('list_button_template/{button}', 'RepliesListButtonController@update')->name('list_button_template.update');
@@ -136,8 +136,8 @@ Route::group(
                 Route::post('replies', 'RepliesController@store')->name('replies.store');
                 Route::put('replies/{reply}', 'RepliesController@update')->name('replies.update');
                 Route::delete('replies/del/{reply}', 'RepliesController@destroy')->name('replies.delete');
-                Route::get('replies?type=qr', 'RepliesController@edit')->name('replies.quick'); //Brij Mohan Negi Update
-                Route::post('replies/ajax_list', 'RepliesController@ajax_list')->name('replies.ajax_list'); //Brij Mohan Negi Update
+                Route::get('replies?type=qr', 'RepliesController@edit')->name('replies.quick');
+                Route::post('replies/ajax_list', 'RepliesController@ajax_list')->name('replies.ajax_list');
                 Route::post('/replies/{reply}/status', [RepliesController::class, 'updateStatus'])
     ->name('replies.status.update');
 

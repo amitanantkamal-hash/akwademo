@@ -10,8 +10,7 @@ class AuthLayout extends Component
 {
     /**
      * Create a new component instance.
-     * 
-     * BRIJ MOHAN NEGI UPDATE
+     *
      */
     public function __construct()
     {

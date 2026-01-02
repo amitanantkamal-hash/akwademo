@@ -15,7 +15,7 @@ class Reply extends Model
     protected $table = 'replies';
     public $guarded = [];
 
-    public function shouldWeUseIt($receivedMessage, Contact $contact) //Brij Mohan Negi Update
+    public function shouldWeUseIt($receivedMessage, Contact $contact)
     {
         $receivedMessage = " " . strtolower($receivedMessage);
         $shouldWeUseIt = false;
@@ -38,7 +38,7 @@ class Reply extends Model
                 foreach ($triggerValues as $trigger) {
                     if ($this->type == 2) {
 
-                        $trigger = " " . strtolower($trigger); //Brij Mohan Negi Update
+                        $trigger = " " . strtolower($trigger);
                         // Exact match
                         if ($receivedMessage == $trigger) {
                             $shouldWeUseIt = true;
@@ -54,7 +54,7 @@ class Reply extends Model
                 }
             } else {
                 //Doesn't contain commas
-                $triggerValues = " " . strtolower($triggerValues); //Brij Mohan Negi Update
+                $triggerValues = " " . strtolower($triggerValues);
                 if ($this->type == 2) {
                     // Exact match
                     if ($receivedMessage == $triggerValues) {

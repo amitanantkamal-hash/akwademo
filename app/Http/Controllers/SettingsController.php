@@ -223,7 +223,7 @@ class SettingsController extends Controller
             //Demo, don;t allow
             return redirect()->route('admin.settings.index')->withStatus(__('Settings not allowed to be updated in DEMO mode!'));
         }
-        //Fixed by brij negi 26Oct 2024
+        
         if ($request->hasFile('site_logo')) {
             $LOGO_URL = $this->saveImageVersions(
                 $this->imagePath,

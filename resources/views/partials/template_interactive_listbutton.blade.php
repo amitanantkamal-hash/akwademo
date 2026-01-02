@@ -1,4 +1,3 @@
-{{-- Brij Mohan Negi Update --}}
 @php
     $data = false;
     $sections = false;

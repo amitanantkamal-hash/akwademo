@@ -389,7 +389,6 @@
 </div>
 @push('topcss')
     <style>
-        /* BrijNegi on 7Mar */
         * {
             margin: 0;
             padding: 0;
